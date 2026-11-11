@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/arrow.gd" id="script"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/arrow.png" id="arrow"]
+
+[node name="Arrow" type="Node2D"]
+script = ExtResource("script")
+visible = false
+z_index = 25
+
+[node name="Artwork" type="Sprite2D" parent="."]
+texture = ExtResource("arrow")
+centered = false
+position = Vector2(0, -6)
+scale = Vector2(0.214286, 0.214286)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Trail" type="Line2D" parent="."]
+points = PackedVector2Array(-25, 0, 0, 0)
+width = 1.8
+default_color = Color(0.34, 0.93, 0.9, 0.5)
+
+[node name="Sweep" type="RayCast2D" parent="."]
+enabled = false
+target_position = Vector2(72, 0)
+collision_mask = 5
+collide_with_areas = true

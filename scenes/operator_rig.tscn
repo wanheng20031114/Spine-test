@@ -1,0 +1,1043 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/operator/head.png" id="head"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/hair_back.png" id="hair_back"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/torso.png" id="torso"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/coat_tail.png" id="coat_tail"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/upper_arm_far.png" id="upper_arm_far"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/forearm_far.png" id="forearm_far"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/upper_arm_near.png" id="upper_arm_near"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/forearm_near.png" id="forearm_near"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/thigh_far.png" id="thigh_far"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/shin_far.png" id="shin_far"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/thigh_near.png" id="thigh_near"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/shin_near.png" id="shin_near"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/sword.png" id="sword"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/bow.png" id="bow"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/arrow.png" id="arrow"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/pull_hand.png" id="pull_hand"]
+
+[sub_resource type="Animation" id="loc_idle"]
+resource_name = "idle"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -68), Vector2(0, -69.2), Vector2(0, -70), Vector2(0, -69.2), Vector2(0, -68)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 0.01, 0, -0.01, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/Head:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.025, 0, -0.025, 0, 0.025]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Coat:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.04, 0, -0.04, 0, 0.04]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/Head/Hair:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.025, 0, 0.025, 0, -0.025]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Hips/FarThigh:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.025, 0.025, 0.025, 0.025, 0.025]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Hips/FarThigh/Shin:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.025, 0.025, 0.025, 0.025, 0.025]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Hips/NearThigh:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.025, -0.025, -0.025, -0.025, -0.025]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Hips/NearThigh/Shin:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.025, 0.025, 0.025, 0.025, 0.025]
+}
+
+[sub_resource type="Animation" id="loc_walk"]
+resource_name = "walk"
+length = 0.72
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -68), Vector2(0, -71), Vector2(0, -68), Vector2(0, -71), Vector2(0, -68)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.025, 0, 0.025, 0, -0.025]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/Head:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.025, 0, -0.025, 0, 0.025]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Coat:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.15, -0.07, -0.12, 0.09, 0.15]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/Head/Hair:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.025, 0, 0.025, 0, -0.025]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Hips/FarThigh:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.45, 0, -0.45, 0, 0.45]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Hips/FarThigh/Shin:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.15, 0.55, 0.05, 0.1, 0.15]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Hips/NearThigh:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.45, 0, 0.45, 0, -0.45]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Hips/NearThigh/Shin:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.05, 0.1, 0.15, 0.55, 0.05]
+}
+
+[sub_resource type="AnimationLibrary" id="loc_lib"]
+_data = {"idle": SubResource("loc_idle"), "walk": SubResource("loc_walk")}
+
+[sub_resource type="Animation" id="act_sword_idle"]
+resource_name = "sword_idle"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.12, 0.17, 0.12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.2, -0.23, -0.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.1, -0.16, -0.1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.14, 0.16, 0.14]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.35, 2.32, 2.35]
+}
+
+[sub_resource type="Animation" id="act_sword_walk"]
+resource_name = "sword_walk"
+length = 0.72
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.28, 0, -0.28, 0, 0.28]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.25, -0.15, -0.25, -0.3, -0.25]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.4, 0, 0.4, 0, -0.4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.12, 0.1, 0.24, 0.1, 0.12]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.35, 2.35, 2.35, 2.35, 2.35]
+}
+
+[sub_resource type="Animation" id="act_slash"]
+resource_name = "slash"
+length = 0.5
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.17, 0.25, 0.38, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.12, -2.5, -2.25, -1.3, -0.25, 0.12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.17, 0.25, 0.38, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.2, -0.75, -0.4, 0.3, -0.1, -0.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.17, 0.25, 0.38, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.1, 0.4, 0.5, 0.3, -0.05, -0.1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.17, 0.25, 0.38, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.14, 0.55, 0.55, 0.3, 0.14, 0.14]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.17, 0.25, 0.38, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.35, 0.65, 1.7, 2.5, 2.6, 2.35]
+}
+
+[sub_resource type="Animation" id="act_bow_ready"]
+resource_name = "bow_ready"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.570796, -1.570796]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.8, -0.8]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.45, -1.45]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.35, 2.35]
+}
+
+[sub_resource type="Animation" id="act_bow_draw"]
+resource_name = "bow_draw"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.570796, -1.59, -1.61]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 0.02, 0.04]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.8, -0.55, -0.35]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.45, -1.8, -2.1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.35, 2.35, 2.35]
+}
+
+[sub_resource type="Animation" id="act_bow_release"]
+resource_name = "bow_release"
+length = 0.25
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.61, -1.47, -1.570796]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.04, -0.06, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.35, -0.1, -0.8]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-2.1, -2.4, -1.45]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.35, 2.35, 2.35]
+}
+
+[sub_resource type="AnimationLibrary" id="act_lib"]
+_data = {"sword_idle": SubResource("act_sword_idle"), "sword_walk": SubResource("act_sword_walk"), "slash": SubResource("act_slash"), "bow_ready": SubResource("act_bow_ready"), "bow_draw": SubResource("act_bow_draw"), "bow_release": SubResource("act_bow_release")}
+
+[node name="Rig" type="Node2D"]
+
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+
+[node name="Hips" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(0, -68)
+z_index = 0
+rest = Transform2D(1, 0, 0, 1, 0, -68)
+auto_calculate_length_and_angle = false
+length = 30
+bone_angle = -1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, -30)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Coat" type="Bone2D" parent="Skeleton2D/Hips"]
+position = Vector2(-12, -9)
+z_index = -5
+rest = Transform2D(1, 0, 0, 1, -12, -9)
+auto_calculate_length_and_angle = false
+length = 48
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Coat" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 48)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Coat"]
+texture = ExtResource("coat_tail")
+centered = false
+position = Vector2(-38, -5)
+scale = Vector2(0.26087, 0.26087)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="FarThigh" type="Bone2D" parent="Skeleton2D/Hips"]
+position = Vector2(-11, 0)
+z_index = -3
+rest = Transform2D(1, 0, 0, 1, -11, 0)
+auto_calculate_length_and_angle = false
+length = 28
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/FarThigh" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 28)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/FarThigh"]
+texture = ExtResource("thigh_far")
+centered = false
+position = Vector2(-11.208633, -5)
+scale = Vector2(0.136691, 0.136691)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Shin" type="Bone2D" parent="Skeleton2D/Hips/FarThigh"]
+position = Vector2(0, 28)
+z_index = 0
+rest = Transform2D(1, 0, 0, 1, 0, 28)
+auto_calculate_length_and_angle = false
+length = 38
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/FarThigh/Shin" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 38)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/FarThigh/Shin"]
+texture = ExtResource("shin_far")
+centered = false
+position = Vector2(-12, -8)
+scale = Vector2(0.16, 0.16)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="NearThigh" type="Bone2D" parent="Skeleton2D/Hips"]
+position = Vector2(10, 0)
+z_index = 2
+rest = Transform2D(1, 0, 0, 1, 10, 0)
+auto_calculate_length_and_angle = false
+length = 28
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/NearThigh" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 28)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/NearThigh"]
+texture = ExtResource("thigh_near")
+centered = false
+position = Vector2(-11.771739, -5)
+scale = Vector2(0.137681, 0.137681)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Shin" type="Bone2D" parent="Skeleton2D/Hips/NearThigh"]
+position = Vector2(0, 28)
+z_index = 0
+rest = Transform2D(1, 0, 0, 1, 0, 28)
+auto_calculate_length_and_angle = false
+length = 38
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/NearThigh/Shin" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 38)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/NearThigh/Shin"]
+texture = ExtResource("shin_near")
+centered = false
+position = Vector2(-12, -8)
+scale = Vector2(0.160535, 0.160535)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Torso" type="Bone2D" parent="Skeleton2D/Hips"]
+position = Vector2(0, 0)
+z_index = 3
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+auto_calculate_length_and_angle = false
+length = 66
+bone_angle = -1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, -66)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso"]
+texture = ExtResource("torso")
+centered = false
+position = Vector2(-31, -76)
+scale = Vector2(0.283871, 0.283871)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Head" type="Bone2D" parent="Skeleton2D/Hips/Torso"]
+position = Vector2(3, -72)
+z_index = 7
+rest = Transform2D(1, 0, 0, 1, 3, -72)
+auto_calculate_length_and_angle = false
+length = 62
+bone_angle = -1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso/Head" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, -62)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Hair" type="Bone2D" parent="Skeleton2D/Hips/Torso/Head"]
+position = Vector2(-2, -56)
+z_index = -1
+rest = Transform2D(1, 0, 0, 1, -2, -56)
+auto_calculate_length_and_angle = false
+length = 34
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso/Head/Hair" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 34)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/Head/Hair"]
+texture = ExtResource("hair_back")
+centered = false
+position = Vector2(-61, -43)
+scale = Vector2(0.35461, 0.35461)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/Head"]
+texture = ExtResource("head")
+centered = false
+position = Vector2(-60, -118)
+scale = Vector2(0.401254, 0.401254)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="ArmAim" type="Bone2D" parent="Skeleton2D/Hips/Torso"]
+position = Vector2(0, -60)
+z_index = 0
+rest = Transform2D(1, 0, 0, 1, 0, -60)
+auto_calculate_length_and_angle = false
+length = 30
+bone_angle = 0
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso/ArmAim" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 30, 0)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="FarUpper" type="Bone2D" parent="Skeleton2D/Hips/Torso/ArmAim"]
+position = Vector2(-17, 0)
+z_index = -2
+rest = Transform2D(1, 0, 0, 1, -17, 0)
+auto_calculate_length_and_angle = false
+length = 26
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 26)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper"]
+texture = ExtResource("upper_arm_far")
+centered = false
+position = Vector2(-7.841584, -6)
+scale = Vector2(0.118812, 0.118812)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="FarLower" type="Bone2D" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper"]
+position = Vector2(0, 26)
+z_index = 0
+rest = Transform2D(1, 0, 0, 1, 0, 26)
+auto_calculate_length_and_angle = false
+length = 25
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 25)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower"]
+texture = ExtResource("forearm_far")
+centered = false
+position = Vector2(-7.809446, -5)
+scale = Vector2(0.114007, 0.114007)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Hand" type="Marker2D" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower"]
+position = Vector2(0, 25)
+
+[node name="PullHand" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand"]
+texture = ExtResource("pull_hand")
+centered = false
+position = Vector2(-6, -4)
+scale = Vector2(0.074534, 0.074534)
+z_index = 0
+rotation = 2.2
+visible = false
+
+[node name="NearUpper" type="Bone2D" parent="Skeleton2D/Hips/Torso/ArmAim"]
+position = Vector2(16, 0)
+z_index = 9
+rest = Transform2D(1, 0, 0, 1, 16, 0)
+auto_calculate_length_and_angle = false
+length = 26
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 26)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper"]
+texture = ExtResource("upper_arm_near")
+centered = false
+position = Vector2(-8.9699, -6)
+scale = Vector2(0.120401, 0.120401)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="NearLower" type="Bone2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper"]
+position = Vector2(0, 26)
+z_index = 0
+rest = Transform2D(1, 0, 0, 1, 0, 26)
+auto_calculate_length_and_angle = false
+length = 25
+bone_angle = 1.570796
+
+[node name="Guide" type="Line2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower" groups=["bone_guides"]]
+visible = false
+z_index = 60
+points = PackedVector2Array(0, 0, 0, 25)
+width = 1.8
+default_color = Color(0.34, 1, 0.76, 0.9)
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower"]
+texture = ExtResource("forearm_near")
+centered = false
+position = Vector2(-9.216667, -5)
+scale = Vector2(0.116667, 0.116667)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Hand" type="Marker2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower"]
+position = Vector2(0, 25)
+
+[node name="Sword" type="Node2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand"]
+rotation = 2.35
+z_index = -1
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword"]
+texture = ExtResource("sword")
+centered = false
+position = Vector2(-17, -99)
+scale = Vector2(0.356688, 0.356688)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Bow" type="Node2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand"]
+rotation = 1.570796
+visible = false
+
+[node name="Artwork" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow"]
+texture = ExtResource("bow")
+centered = false
+position = Vector2(-30, -61)
+scale = Vector2(0.388535, 0.388535)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="String" type="Line2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow"]
+points = PackedVector2Array(-25, -57, -41, 0, -25, 57)
+width = 1.1
+default_color = Color(0.68, 0.97, 1, 1)
+antialiased = true
+
+[node name="NockedArrow" type="Sprite2D" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow"]
+texture = ExtResource("arrow")
+centered = false
+position = Vector2(-41, -6)
+scale = Vector2(0.214286, 0.214286)
+z_index = 0
+rotation = 0
+visible = true
+
+[node name="Locomotion" type="AnimationPlayer" parent="."]
+libraries = {&"": SubResource("loc_lib")}
+autoplay = "idle"
+
+[node name="Actions" type="AnimationPlayer" parent="."]
+libraries = {&"": SubResource("act_lib")}
+autoplay = "sword_idle"

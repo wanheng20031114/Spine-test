@@ -1,0 +1,3 @@
+# Godot 4+ cache and local test data
+.godot/
+.local/

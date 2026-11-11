@@ -1,0 +1,1059 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/lab.gd" id="script"]
+
+[ext_resource type="PackedScene" path="res://scenes/operator.tscn" id="operator"]
+
+[ext_resource type="PackedScene" path="res://scenes/target.tscn" id="target"]
+
+[ext_resource type="PackedScene" path="res://scenes/arrow.tscn" id="arrow"]
+
+[ext_resource type="Font" path="res://assets/ui_font.tres" id="font"]
+
+[ext_resource type="Texture2D" path="res://assets/operator/parts_atlas.png" id="atlas"]
+
+[sub_resource type="RectangleShape2D" id="floor"]
+size = Vector2(1110, 36)
+
+[sub_resource type="StyleBoxFlat" id="button"]
+bg_color = Color(0.1, 0.19, 0.23, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.24, 0.39, 0.43, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_left = 4
+corner_radius_bottom_right = 4
+
+[sub_resource type="StyleBoxFlat" id="button_hover"]
+bg_color = Color(0.17, 0.3, 0.33, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.9, 0.81, 1)
+
+[sub_resource type="StyleBoxFlat" id="charge_bg"]
+bg_color = Color(0.12, 0.22, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="charge_fill"]
+bg_color = Color(0.45, 0.94, 0.83, 1)
+
+[node name="FieldLab" type="Node2D"]
+script = ExtResource("script")
+
+[node name="Environment" type="Node2D" parent="."]
+
+
+[node name="Background" type="ColorRect" parent="Environment"]
+offset_left = 0
+offset_top = 0
+offset_right = 1440
+offset_bottom = 900
+color = Color(0.035, 0.055, 0.074, 1)
+mouse_filter = 2
+
+[node name="Arena" type="ColorRect" parent="Environment"]
+offset_left = 24
+offset_top = 150
+offset_right = 1110
+offset_bottom = 718
+color = Color(0.052, 0.086, 0.108, 1)
+mouse_filter = 2
+
+[node name="GridV0" type="Line2D" parent="Environment"]
+points = PackedVector2Array(62, 150, 62, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV1" type="Line2D" parent="Environment"]
+points = PackedVector2Array(126, 150, 126, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV2" type="Line2D" parent="Environment"]
+points = PackedVector2Array(190, 150, 190, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV3" type="Line2D" parent="Environment"]
+points = PackedVector2Array(254, 150, 254, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV4" type="Line2D" parent="Environment"]
+points = PackedVector2Array(318, 150, 318, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV5" type="Line2D" parent="Environment"]
+points = PackedVector2Array(382, 150, 382, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV6" type="Line2D" parent="Environment"]
+points = PackedVector2Array(446, 150, 446, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV7" type="Line2D" parent="Environment"]
+points = PackedVector2Array(510, 150, 510, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV8" type="Line2D" parent="Environment"]
+points = PackedVector2Array(574, 150, 574, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV9" type="Line2D" parent="Environment"]
+points = PackedVector2Array(638, 150, 638, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV10" type="Line2D" parent="Environment"]
+points = PackedVector2Array(702, 150, 702, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV11" type="Line2D" parent="Environment"]
+points = PackedVector2Array(766, 150, 766, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV12" type="Line2D" parent="Environment"]
+points = PackedVector2Array(830, 150, 830, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV13" type="Line2D" parent="Environment"]
+points = PackedVector2Array(894, 150, 894, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV14" type="Line2D" parent="Environment"]
+points = PackedVector2Array(958, 150, 958, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV15" type="Line2D" parent="Environment"]
+points = PackedVector2Array(1022, 150, 1022, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridV16" type="Line2D" parent="Environment"]
+points = PackedVector2Array(1086, 150, 1086, 716)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH0" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 202, 1110, 202)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH1" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 266, 1110, 266)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH2" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 330, 1110, 330)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH3" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 394, 1110, 394)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH4" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 458, 1110, 458)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH5" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 522, 1110, 522)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH6" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 586, 1110, 586)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH7" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 650, 1110, 650)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="GridH8" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 714, 1110, 714)
+width = 1
+default_color = Color(0.13, 0.23, 0.27, 0.4)
+antialiased = true
+
+[node name="Panel0" type="ColorRect" parent="Environment"]
+offset_left = 52
+offset_top = 214
+offset_right = 276
+offset_bottom = 394
+color = Color(0.062, 0.104, 0.128, 1)
+mouse_filter = 2
+
+[node name="PanelLine0" type="Line2D" parent="Environment"]
+points = PackedVector2Array(52, 236, 52, 214, 92, 214)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="PanelBase0" type="Line2D" parent="Environment"]
+points = PackedVector2Array(236, 394, 276, 394, 276, 372)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="Panel1" type="ColorRect" parent="Environment"]
+offset_left = 310
+offset_top = 214
+offset_right = 530
+offset_bottom = 394
+color = Color(0.062, 0.104, 0.128, 1)
+mouse_filter = 2
+
+[node name="PanelLine1" type="Line2D" parent="Environment"]
+points = PackedVector2Array(310, 236, 310, 214, 350, 214)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="PanelBase1" type="Line2D" parent="Environment"]
+points = PackedVector2Array(490, 394, 530, 394, 530, 372)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="Panel2" type="ColorRect" parent="Environment"]
+offset_left = 566
+offset_top = 214
+offset_right = 790
+offset_bottom = 394
+color = Color(0.062, 0.104, 0.128, 1)
+mouse_filter = 2
+
+[node name="PanelLine2" type="Line2D" parent="Environment"]
+points = PackedVector2Array(566, 236, 566, 214, 606, 214)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="PanelBase2" type="Line2D" parent="Environment"]
+points = PackedVector2Array(750, 394, 790, 394, 790, 372)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="Panel3" type="ColorRect" parent="Environment"]
+offset_left = 824
+offset_top = 214
+offset_right = 1076
+offset_bottom = 394
+color = Color(0.062, 0.104, 0.128, 1)
+mouse_filter = 2
+
+[node name="PanelLine3" type="Line2D" parent="Environment"]
+points = PackedVector2Array(824, 236, 824, 214, 864, 214)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="PanelBase3" type="Line2D" parent="Environment"]
+points = PackedVector2Array(1036, 394, 1076, 394, 1076, 372)
+width = 2
+default_color = Color(0.21, 0.37, 0.4, 0.8)
+antialiased = true
+
+[node name="BackgroundLabel" type="Label" parent="Environment"]
+offset_left = 69
+offset_top = 242
+offset_right = 969
+offset_bottom = 292
+text = "OPERATOR  /  MOTION STUDY"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0.18, 0.29, 0.33, 1)
+
+[node name="BackgroundIndex" type="Label" parent="Environment"]
+offset_left = 71
+offset_top = 307
+offset_right = 1021
+offset_bottom = 332
+text = "01       CUTOUT RIG                    02       COMBAT RESPONSE"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.22, 0.35, 0.38, 1)
+
+[node name="FloorFill" type="ColorRect" parent="Environment"]
+offset_left = 24
+offset_top = 660
+offset_right = 1110
+offset_bottom = 718
+color = Color(0.065, 0.125, 0.15, 1)
+mouse_filter = 2
+
+[node name="FloorLight" type="Line2D" parent="Environment"]
+points = PackedVector2Array(24, 658, 1110, 658)
+width = 2
+default_color = Color(0.4, 0.87, 0.81, 1)
+antialiased = true
+
+[node name="FloorTick0" type="Line2D" parent="Environment"]
+points = PackedVector2Array(40, 689, 52, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick1" type="Line2D" parent="Environment"]
+points = PackedVector2Array(72, 689, 84, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick2" type="Line2D" parent="Environment"]
+points = PackedVector2Array(104, 689, 116, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick3" type="Line2D" parent="Environment"]
+points = PackedVector2Array(136, 689, 148, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick4" type="Line2D" parent="Environment"]
+points = PackedVector2Array(168, 689, 180, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick5" type="Line2D" parent="Environment"]
+points = PackedVector2Array(200, 689, 212, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick6" type="Line2D" parent="Environment"]
+points = PackedVector2Array(232, 689, 244, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick7" type="Line2D" parent="Environment"]
+points = PackedVector2Array(264, 689, 276, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick8" type="Line2D" parent="Environment"]
+points = PackedVector2Array(296, 689, 308, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick9" type="Line2D" parent="Environment"]
+points = PackedVector2Array(328, 689, 340, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick10" type="Line2D" parent="Environment"]
+points = PackedVector2Array(360, 689, 372, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick11" type="Line2D" parent="Environment"]
+points = PackedVector2Array(392, 689, 404, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick12" type="Line2D" parent="Environment"]
+points = PackedVector2Array(424, 689, 436, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick13" type="Line2D" parent="Environment"]
+points = PackedVector2Array(456, 689, 468, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick14" type="Line2D" parent="Environment"]
+points = PackedVector2Array(488, 689, 500, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick15" type="Line2D" parent="Environment"]
+points = PackedVector2Array(520, 689, 532, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick16" type="Line2D" parent="Environment"]
+points = PackedVector2Array(552, 689, 564, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick17" type="Line2D" parent="Environment"]
+points = PackedVector2Array(584, 689, 596, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick18" type="Line2D" parent="Environment"]
+points = PackedVector2Array(616, 689, 628, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick19" type="Line2D" parent="Environment"]
+points = PackedVector2Array(648, 689, 660, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick20" type="Line2D" parent="Environment"]
+points = PackedVector2Array(680, 689, 692, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick21" type="Line2D" parent="Environment"]
+points = PackedVector2Array(712, 689, 724, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick22" type="Line2D" parent="Environment"]
+points = PackedVector2Array(744, 689, 756, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick23" type="Line2D" parent="Environment"]
+points = PackedVector2Array(776, 689, 788, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick24" type="Line2D" parent="Environment"]
+points = PackedVector2Array(808, 689, 820, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick25" type="Line2D" parent="Environment"]
+points = PackedVector2Array(840, 689, 852, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick26" type="Line2D" parent="Environment"]
+points = PackedVector2Array(872, 689, 884, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick27" type="Line2D" parent="Environment"]
+points = PackedVector2Array(904, 689, 916, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick28" type="Line2D" parent="Environment"]
+points = PackedVector2Array(936, 689, 948, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick29" type="Line2D" parent="Environment"]
+points = PackedVector2Array(968, 689, 980, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick30" type="Line2D" parent="Environment"]
+points = PackedVector2Array(1000, 689, 1012, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick31" type="Line2D" parent="Environment"]
+points = PackedVector2Array(1032, 689, 1044, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick32" type="Line2D" parent="Environment"]
+points = PackedVector2Array(1064, 689, 1076, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="FloorTick33" type="Line2D" parent="Environment"]
+points = PackedVector2Array(1096, 689, 1108, 677)
+width = 2
+default_color = Color(0.18, 0.36, 0.39, 0.7)
+antialiased = true
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(555, 676)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("floor")
+
+[node name="TargetLeft" parent="." instance=ExtResource("target")]
+position = Vector2(160, 658)
+
+[node name="TargetNear" parent="." instance=ExtResource("target")]
+position = Vector2(780, 658)
+
+[node name="TargetFar" parent="." instance=ExtResource("target")]
+position = Vector2(990, 658)
+
+[node name="Operator" parent="." instance=ExtResource("operator")]
+position = Vector2(410, 658)
+
+[node name="Arrows" type="Node2D" parent="."]
+
+
+[node name="Arrow01" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow02" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow03" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow04" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow05" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow06" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow07" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow08" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow09" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow10" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow11" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Arrow12" parent="Arrows" instance=ExtResource("arrow")]
+
+
+[node name="Reticle" type="Node2D" parent="."]
+z_index = 100
+
+[node name="Stroke0" type="Line2D" parent="Reticle"]
+points = PackedVector2Array(-12, 0, -5, 0)
+width = 1.5
+default_color = Color(1, 1, 1, 1)
+antialiased = true
+
+[node name="Stroke1" type="Line2D" parent="Reticle"]
+points = PackedVector2Array(5, 0, 12, 0)
+width = 1.5
+default_color = Color(1, 1, 1, 1)
+antialiased = true
+
+[node name="Stroke2" type="Line2D" parent="Reticle"]
+points = PackedVector2Array(0, -12, 0, -5)
+width = 1.5
+default_color = Color(1, 1, 1, 1)
+antialiased = true
+
+[node name="Stroke3" type="Line2D" parent="Reticle"]
+points = PackedVector2Array(0, 5, 0, 12)
+width = 1.5
+default_color = Color(1, 1, 1, 1)
+antialiased = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+
+[node name="Kicker" type="Label" parent="HUD"]
+offset_left = 32
+offset_top = 24
+offset_right = 932
+offset_bottom = 48
+text = "A I   C U T O U T   /   2 D   A N I M A T I O N   L A B"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.44, 0.89, 0.83, 1)
+
+[node name="Title" type="Label" parent="HUD"]
+offset_left = 30
+offset_top = 52
+offset_right = 1030
+offset_bottom = 109
+text = "SPINE  /  FIELD TEST"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(0.89, 0.95, 0.95, 1)
+
+[node name="Subtitle" type="Label" parent="HUD"]
+offset_left = 33
+offset_top = 113
+offset_right = 933
+offset_bottom = 140
+text = "白发兽耳干员 · 分件骨骼动作试验场"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.46, 0.61, 0.66, 1)
+
+[node name="Version" type="Label" parent="HUD"]
+offset_left = 1170
+offset_top = 57
+offset_right = 1405
+offset_bottom = 112
+text = "PROTOTYPE   01\nGODOT  4.6"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.47, 0.69, 0.71, 1)
+horizontal_alignment = 2
+
+[node name="StageTitle" type="Label" parent="HUD"]
+offset_left = 48
+offset_top = 170
+offset_right = 598
+offset_bottom = 200
+text = "01  /  横版测试区域"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(0.59, 0.76, 0.78, 1)
+
+[node name="StageMeta" type="Label" parent="HUD"]
+offset_left = 764
+offset_top = 170
+offset_right = 1086
+offset_bottom = 195
+text = "A / D 移动  ·  鼠标控制朝向"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.4, 0.6, 0.64, 1)
+horizontal_alignment = 2
+
+[node name="Sidebar" type="ColorRect" parent="HUD"]
+offset_left = 1134
+offset_top = 150
+offset_right = 1408
+offset_bottom = 718
+color = Color(0.068, 0.108, 0.132, 1)
+mouse_filter = 2
+
+[node name="SideAccent" type="ColorRect" parent="HUD"]
+offset_left = 1134
+offset_top = 150
+offset_right = 1137
+offset_bottom = 198
+color = Color(0.4, 0.9, 0.8, 1)
+mouse_filter = 2
+
+[node name="SideTitle" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 174
+offset_right = 1382
+offset_bottom = 204
+text = "干员状态"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 23
+theme_override_colors/font_color = Color(0.88, 0.94, 0.94, 1)
+
+[node name="SideSubtitle" type="Label" parent="HUD"]
+offset_left = 1159
+offset_top = 212
+offset_right = 1384
+offset_bottom = 232
+text = "LIVE  TELEMETRY"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.43, 0.64, 0.67, 1)
+
+[node name="WeaponCaption" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 263
+offset_right = 1383
+offset_bottom = 285
+text = "当前武器"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.43, 0.61, 0.65, 1)
+
+[node name="Weapon" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 294
+offset_right = 1388
+offset_bottom = 328
+text = "01  /  战术直剑"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 23
+theme_override_colors/font_color = Color(0.61, 0.96, 0.87, 1)
+
+[node name="State" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 337
+offset_right = 1383
+offset_bottom = 364
+text = "待机 / 行走"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.75, 0.84, 0.86, 1)
+
+[node name="ChargeLabel" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 389
+offset_right = 1382
+offset_bottom = 413
+text = "蓄力  000%"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.47, 0.67, 0.7, 1)
+
+[node name="Charge" type="ProgressBar" parent="HUD"]
+offset_left = 1158.0
+offset_top = 425.0
+offset_right = 1384.0
+offset_bottom = 431.0
+show_percentage = false
+mouse_filter = 2
+theme_override_styles/background = SubResource("charge_bg")
+theme_override_styles/fill = SubResource("charge_fill")
+
+[node name="Stats" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 461
+offset_right = 1384
+offset_bottom = 611
+text = "挥剑次数    00\n射箭次数    00\n命中次数    00\n累计伤害    000"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(0.66, 0.79, 0.81, 1)
+theme_override_constants/line_spacing = 12
+
+[node name="PartsButton" type="Button" parent="HUD"]
+offset_left = 1158
+offset_top = 627
+offset_right = 1268
+offset_bottom = 669
+text = "部件图   TAB"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("button_hover")
+
+[node name="ResetButton" type="Button" parent="HUD"]
+offset_left = 1278
+offset_top = 627
+offset_right = 1384
+offset_bottom = 669
+text = "重置   R"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("button_hover")
+
+[node name="Hint" type="Label" parent="HUD"]
+offset_left = 48
+offset_top = 727
+offset_right = 1083
+offset_bottom = 757
+text = "靠近训练靶，单击左键挥剑"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.72, 0.89, 0.87, 1)
+
+[node name="KeyCard0" type="ColorRect" parent="HUD"]
+offset_left = 32
+offset_top = 785
+offset_right = 197
+offset_bottom = 857
+color = Color(0.075, 0.118, 0.143, 1)
+mouse_filter = 2
+
+[node name="Key0" type="Label" parent="HUD"]
+offset_left = 47
+offset_top = 795
+offset_right = 182
+offset_bottom = 818
+text = "A / D"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.73, 0.96, 0.91, 1)
+
+[node name="KeyDesc0" type="Label" parent="HUD"]
+offset_left = 47
+offset_top = 826
+offset_right = 182
+offset_bottom = 848
+text = "横向移动"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.48, 0.65, 0.69, 1)
+
+[node name="KeyCard1" type="ColorRect" parent="HUD"]
+offset_left = 213
+offset_top = 785
+offset_right = 393
+offset_bottom = 857
+color = Color(0.075, 0.118, 0.143, 1)
+mouse_filter = 2
+
+[node name="Key1" type="Label" parent="HUD"]
+offset_left = 228
+offset_top = 795
+offset_right = 378
+offset_bottom = 818
+text = "鼠标"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.73, 0.96, 0.91, 1)
+
+[node name="KeyDesc1" type="Label" parent="HUD"]
+offset_left = 228
+offset_top = 826
+offset_right = 378
+offset_bottom = 848
+text = "瞄准 / 朝向"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.48, 0.65, 0.69, 1)
+
+[node name="KeyCard2" type="ColorRect" parent="HUD"]
+offset_left = 409
+offset_top = 785
+offset_right = 794
+offset_bottom = 857
+color = Color(0.075, 0.118, 0.143, 1)
+mouse_filter = 2
+
+[node name="Key2" type="Label" parent="HUD"]
+offset_left = 424
+offset_top = 795
+offset_right = 779
+offset_bottom = 818
+text = "左键"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.73, 0.96, 0.91, 1)
+
+[node name="KeyDesc2" type="Label" parent="HUD"]
+offset_left = 424
+offset_top = 826
+offset_right = 779
+offset_bottom = 848
+text = "挥剑 · 按住拉弓 / 松开放箭"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.48, 0.65, 0.69, 1)
+
+[node name="KeyCard3" type="ColorRect" parent="HUD"]
+offset_left = 810
+offset_top = 785
+offset_right = 984
+offset_bottom = 857
+color = Color(0.075, 0.118, 0.143, 1)
+mouse_filter = 2
+
+[node name="Key3" type="Label" parent="HUD"]
+offset_left = 825
+offset_top = 795
+offset_right = 969
+offset_bottom = 818
+text = "Q"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.73, 0.96, 0.91, 1)
+
+[node name="KeyDesc3" type="Label" parent="HUD"]
+offset_left = 825
+offset_top = 826
+offset_right = 969
+offset_bottom = 848
+text = "切换武器"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.48, 0.65, 0.69, 1)
+
+[node name="KeyCard4" type="ColorRect" parent="HUD"]
+offset_left = 1000
+offset_top = 785
+offset_right = 1174
+offset_bottom = 857
+color = Color(0.075, 0.118, 0.143, 1)
+mouse_filter = 2
+
+[node name="Key4" type="Label" parent="HUD"]
+offset_left = 1015
+offset_top = 795
+offset_right = 1159
+offset_bottom = 818
+text = "F1"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.73, 0.96, 0.91, 1)
+
+[node name="KeyDesc4" type="Label" parent="HUD"]
+offset_left = 1015
+offset_top = 826
+offset_right = 1159
+offset_bottom = 848
+text = "骨骼显示"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.48, 0.65, 0.69, 1)
+
+[node name="Footnote" type="Label" parent="HUD"]
+offset_left = 33
+offset_top = 870
+offset_right = 933
+offset_bottom = 892
+text = "16 个独立部件  /  原生骨骼  /  可编辑动画轨道"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.33, 0.49, 0.54, 1)
+
+[node name="AtlasPanel" type="Control" parent="HUD"]
+visible = false
+offset_right = 1440.0
+offset_bottom = 900.0
+mouse_filter = 0
+
+[node name="Shade" type="ColorRect" parent="HUD/AtlasPanel"]
+offset_left = 0
+offset_top = 0
+offset_right = 1440
+offset_bottom = 900
+color = Color(0.015, 0.026, 0.039, 0.96)
+mouse_filter = 2
+
+[node name="AtlasTitle" type="Label" parent="HUD/AtlasPanel"]
+offset_left = 65
+offset_top = 30
+offset_right = 1165
+offset_bottom = 80
+text = "角色分件  /  PARTS ATLAS"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0.8, 0.95, 0.94, 1)
+
+[node name="AtlasHint" type="Label" parent="HUD/AtlasPanel"]
+offset_left = 68
+offset_top = 85
+offset_right = 1168
+offset_bottom = 115
+text = "TAB 关闭  ·  原始 AI 生成透明图集  ·  16 个独立部件"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.49, 0.68, 0.7, 1)
+
+[node name="Atlas" type="TextureRect" parent="HUD/AtlasPanel"]
+offset_left = 345.0
+offset_top = 136.0
+offset_right = 1045.0
+offset_bottom = 836.0
+texture = ExtResource("atlas")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="AtlasLegend" type="Label" parent="HUD/AtlasPanel"]
+offset_left = 70
+offset_top = 290
+offset_right = 350
+offset_bottom = 560
+text = "01 头部     02 后发     03 躯干     04 衣摆\n05–08 上臂 / 前臂     09–12 大腿 / 靴子\n13 剑       14 弓       15 箭矢     16 拉弦手"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.53, 0.73, 0.76, 1)
+theme_override_constants/line_spacing = 14
+
+[connection signal="pressed" from="HUD/PartsButton" to="." method="_toggle_parts"]
+
+[connection signal="pressed" from="HUD/ResetButton" to="." method="_reset_lab"]

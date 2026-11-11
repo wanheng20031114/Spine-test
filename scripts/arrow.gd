@@ -1,0 +1,46 @@
+class_name TrainingArrow
+extends Node2D
+
+var active := false
+var velocity := Vector2.ZERO
+var remaining := 0.0
+var damage := 0
+@onready var sweep: RayCast2D = $Sweep
+
+
+func launch(origin: Vector2, direction: Vector2, power: float) -> void:
+	global_position = origin
+	rotation = direction.angle()
+	velocity = direction * lerpf(650.0, 1120.0, power)
+	damage = roundi(lerpf(18.0, 65.0, power))
+	remaining = 2.0
+	active = true
+	visible = true
+	sweep.enabled = true
+
+
+func deactivate() -> void:
+	active = false
+	visible = false
+	sweep.enabled = false
+
+
+func _physics_process(delta: float) -> void:
+	if not active:
+		return
+	remaining -= delta
+	if remaining <= 0.0:
+		deactivate()
+		return
+	velocity.y += 130.0 * delta
+	rotation = velocity.angle()
+	# Sweep the full distance, including the tip. Fast arrows cannot tunnel.
+	sweep.target_position = to_local(global_position + velocity * delta + velocity.normalized() * 62.0)
+	sweep.force_raycast_update()
+	if sweep.is_colliding():
+		var collider := sweep.get_collider()
+		if collider is TrainingTarget:
+			collider.hit(damage, "箭矢")
+		deactivate()
+		return
+	global_position += velocity * delta
