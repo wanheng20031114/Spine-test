@@ -1,0 +1,302 @@
+{
+  "Skeleton2D/Hips/Coat/Artwork": {
+    "part": "skirt",
+    "offset": [
+      -20,
+      -3
+    ],
+    "scale": [
+      0.043,
+      0.043
+    ],
+    "rendered_size": [
+      35.131,
+      43.0
+    ]
+  },
+  "Skeleton2D/Hips/FarThigh/Artwork": {
+    "part": "thigh",
+    "offset": [
+      -7.2,
+      -7
+    ],
+    "scale": [
+      0.024364406779661018,
+      0.024364406779661018
+    ],
+    "rendered_size": [
+      14.619,
+      46.0
+    ]
+  },
+  "Skeleton2D/Hips/FarThigh/Shin/Artwork": {
+    "part": "shin",
+    "offset": [
+      -4.4,
+      -6
+    ],
+    "scale": [
+      0.02131979695431472,
+      0.02131979695431472
+    ],
+    "rendered_size": [
+      8.997,
+      42.0
+    ]
+  },
+  "Skeleton2D/Hips/FarThigh/Shin/Foot/Artwork": {
+    "part": "foot",
+    "offset": [
+      -5.0,
+      -5
+    ],
+    "scale": [
+      0.021638330757341576,
+      0.021638330757341576
+    ],
+    "rendered_size": [
+      29.839,
+      14.0
+    ]
+  },
+  "Skeleton2D/Hips/NearThigh/Artwork": {
+    "part": "thigh",
+    "offset": [
+      -7.2,
+      -7
+    ],
+    "scale": [
+      0.024364406779661018,
+      0.024364406779661018
+    ],
+    "rendered_size": [
+      14.619,
+      46.0
+    ]
+  },
+  "Skeleton2D/Hips/NearThigh/Shin/Artwork": {
+    "part": "shin",
+    "offset": [
+      -4.4,
+      -6
+    ],
+    "scale": [
+      0.02131979695431472,
+      0.02131979695431472
+    ],
+    "rendered_size": [
+      8.997,
+      42.0
+    ]
+  },
+  "Skeleton2D/Hips/NearThigh/Shin/Foot/Artwork": {
+    "part": "foot",
+    "offset": [
+      -5.0,
+      -5
+    ],
+    "scale": [
+      0.021638330757341576,
+      0.021638330757341576
+    ],
+    "rendered_size": [
+      29.839,
+      14.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/Artwork": {
+    "part": "torso",
+    "offset": [
+      -14,
+      -75
+    ],
+    "scale": [
+      0.06129597197898424,
+      0.06129597197898424
+    ],
+    "rendered_size": [
+      30.096,
+      70.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/Head/Artwork": {
+    "part": "head",
+    "offset": [
+      -57,
+      -103
+    ],
+    "scale": [
+      0.11313518696069032,
+      0.11313518696069032
+    ],
+    "rendered_size": [
+      107.252,
+      118.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/FarUpper/Artwork": {
+    "part": "upper_arm",
+    "offset": [
+      -7.0,
+      -7
+    ],
+    "scale": [
+      0.02054380664652568,
+      0.02054380664652568
+    ],
+    "rendered_size": [
+      11.402,
+      34.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Artwork": {
+    "part": "forearm",
+    "offset": [
+      -4.9,
+      -6
+    ],
+    "scale": [
+      0.02471169686985173,
+      0.02471169686985173
+    ],
+    "rendered_size": [
+      12.603,
+      45.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/NearUpper/Artwork": {
+    "part": "upper_arm",
+    "offset": [
+      -7.0,
+      -7
+    ],
+    "scale": [
+      0.025377643504531724,
+      0.025377643504531724
+    ],
+    "rendered_size": [
+      14.085,
+      42.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Artwork": {
+    "part": "forearm",
+    "offset": [
+      -4.9,
+      -6
+    ],
+    "scale": [
+      0.020318506315211423,
+      0.020318506315211423
+    ],
+    "rendered_size": [
+      10.362,
+      37.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand/RelaxedHand": {
+    "part": "hand_relaxed",
+    "offset": [
+      -0.7,
+      -3
+    ],
+    "scale": [
+      0.012059369202226345,
+      0.012059369202226345
+    ],
+    "rendered_size": [
+      13.0,
+      6.476
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand/PullHand": {
+    "part": "hand_pull",
+    "offset": [
+      -0.5,
+      -4.2
+    ],
+    "scale": [
+      0.010517799352750809,
+      0.010517799352750809
+    ],
+    "rendered_size": [
+      13.0,
+      6.879
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword/Artwork": {
+    "part": "sword",
+    "offset": [
+      -1.15,
+      -89.25
+    ],
+    "scale": [
+      0.06680026720106881,
+      0.06680026720106881
+    ],
+    "rendered_size": [
+      16.967,
+      100.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword/GripHand": {
+    "part": "hand_sword",
+    "offset": [
+      -0.5,
+      -5.8
+    ],
+    "scale": [
+      0.01171875,
+      0.01171875
+    ],
+    "rendered_size": [
+      10.5,
+      9.352
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow/Artwork": {
+    "part": "bow",
+    "offset": [
+      -6.7,
+      -60.4
+    ],
+    "scale": [
+      0.049079754601226995,
+      0.081799591002045
+    ],
+    "rendered_size": [
+      17.816,
+      120.0
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow/GripHand": {
+    "part": "hand_bow",
+    "offset": [
+      -1.8,
+      -5.8
+    ],
+    "scale": [
+      0.014634146341463415,
+      0.014634146341463415
+    ],
+    "rendered_size": [
+      12.0,
+      8.327
+    ]
+  },
+  "Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow/NockedArrow": {
+    "part": "arrow",
+    "offset": [
+      -12,
+      -3
+    ],
+    "scale": [
+      0.04484304932735426,
+      0.04484304932735426
+    ],
+    "rendered_size": [
+      90.0,
+      6.054
+    ]
+  }
+}

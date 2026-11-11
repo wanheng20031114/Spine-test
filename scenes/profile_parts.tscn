@@ -1,0 +1,312 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/head.png" id="head"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/hair_back.png" id="hair_back"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/torso.png" id="torso"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/skirt.png" id="skirt"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/upper_arm.png" id="upper_arm"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/forearm.png" id="forearm"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/thigh.png" id="thigh"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/shin.png" id="shin"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/foot.png" id="foot"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/hand_sword.png" id="hand_sword"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/hand_bow.png" id="hand_bow"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/hand_pull.png" id="hand_pull"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/hand_relaxed.png" id="hand_relaxed"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/sword.png" id="sword"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/bow.png" id="bow"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/arrow.png" id="arrow"]
+
+[ext_resource type="Font" path="res://assets/ui_font.tres" id="font"]
+
+[node name="ProfileParts" type="GridContainer"]
+columns = 4
+theme_override_constants/h_separation = 18
+theme_override_constants/v_separation = 12
+
+[node name="head" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="head"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("head")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="head"]
+text = "01  头部"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="hair_back" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="hair_back"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("hair_back")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="hair_back"]
+text = "02  后发"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="torso" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="torso"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("torso")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="torso"]
+text = "03  侧面上衣"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="skirt" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="skirt"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("skirt")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="skirt"]
+text = "04  独立裙摆"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="upper_arm" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="upper_arm"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("upper_arm")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="upper_arm"]
+text = "05  上臂"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="forearm" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="forearm"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("forearm")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="forearm"]
+text = "06  前臂无手"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="thigh" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="thigh"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("thigh")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="thigh"]
+text = "07  大腿"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="shin" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="shin"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("shin")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="shin"]
+text = "08  小腿长袜"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="foot" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="foot"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("foot")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="foot"]
+text = "09  独立鞋"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="hand_sword" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="hand_sword"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("hand_sword")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="hand_sword"]
+text = "10  持剑手"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="hand_bow" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="hand_bow"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("hand_bow")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="hand_bow"]
+text = "11  握弓手"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="hand_pull" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="hand_pull"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("hand_pull")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="hand_pull"]
+text = "12  拉弦手"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="hand_relaxed" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="hand_relaxed"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("hand_relaxed")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="hand_relaxed"]
+text = "13  放松手"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="sword" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="sword"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("sword")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="sword"]
+text = "14  剑"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="bow" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="bow"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("bow")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="bow"]
+text = "15  弓无弦"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+
+[node name="arrow" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(196, 154)
+mouse_filter = 2
+
+[node name="Image" type="TextureRect" parent="arrow"]
+custom_minimum_size = Vector2(196, 126)
+texture = ExtResource("arrow")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="arrow"]
+text = "16  箭"
+horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14

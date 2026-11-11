@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/schoolgirl_rig.tscn" id="rig"]
+[ext_resource type="Script" path="res://tests/profile_pose_test.gd" id="script"]
+
+[node name="ProfilePoseTest" type="Node"]
+script = ExtResource("script")
+
+[node name="Rig" parent="." instance=ExtResource("rig")]

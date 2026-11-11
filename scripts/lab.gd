@@ -51,7 +51,7 @@ func _process(_delta: float) -> void:
 func _shoot(origin: Vector2, direction: Vector2, power: float) -> void:
 	# Projectile instances are authored in main.tscn; reuse the fixed pool.
 	var arrow := arrows.get_child(next_arrow) as TrainingArrow
-	arrow.launch(origin, direction, power, operator.projectile_texture)
+	arrow.launch(origin, direction, power, operator.projectile_texture, operator.projectile_height)
 	next_arrow = (next_arrow + 1) % arrows.get_child_count()
 
 
@@ -107,5 +107,7 @@ func _update_character_ui() -> void:
 	$HUD/CharacterButton.text = operator.display_name + "  / F2"
 	$HUD/Subtitle.text = operator.display_name + " · 分件骨骼动作试验场"
 	$HUD/AtlasPanel/Atlas.texture = operator.parts_atlas
-	$HUD/AtlasPanel/AtlasTitle.text = operator.display_name + "  /  PARTS ATLAS"
+	$HUD/AtlasPanel/Atlas.visible = character_index == 0
+	$HUD/AtlasPanel/ProfileParts.visible = character_index == 1
+	$HUD/AtlasPanel/AtlasTitle.text = operator.display_name + "  /  PARTS"
 	$HUD/AtlasPanel/AtlasLegend.text = operator.parts_legend

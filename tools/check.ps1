@@ -23,3 +23,4 @@ function Invoke-GodotCheck([string[]]$ExtraArguments, [string]$LogName, [string]
 }
 Invoke-GodotCheck @('--editor', '--quit') 'import-check.log' ''
 Invoke-GodotCheck @('res://tests/gameplay_test.tscn') 'gameplay-test.log' 'GAMEPLAY_TEST_OK'
+Invoke-GodotCheck @('res://tests/profile_pose_test.tscn') 'profile-pose-test.log' 'PROFILE_POSE_TEST_OK'

@@ -1,0 +1,290 @@
+{
+  "head": {
+    "source": "source/head.png",
+    "source_size": [
+      1312,
+      1199
+    ],
+    "alpha_crop": [
+      177,
+      115,
+      1117,
+      1150
+    ],
+    "padding": 4,
+    "size": [
+      948,
+      1043
+    ]
+  },
+  "hair_back": {
+    "source": "source/hair_back.png",
+    "source_size": [
+      793,
+      1983
+    ],
+    "alpha_crop": [
+      128,
+      86,
+      618,
+      1941
+    ],
+    "padding": 4,
+    "size": [
+      498,
+      1863
+    ]
+  },
+  "torso": {
+    "source": "source/torso.png",
+    "source_size": [
+      1086,
+      1448
+    ],
+    "alpha_crop": [
+      304,
+      169,
+      787,
+      1303
+    ],
+    "padding": 4,
+    "size": [
+      491,
+      1142
+    ]
+  },
+  "skirt": {
+    "source": "source/skirt.png",
+    "source_size": [
+      1312,
+      1199
+    ],
+    "alpha_crop": [
+      207,
+      112,
+      1016,
+      1104
+    ],
+    "padding": 4,
+    "size": [
+      817,
+      1000
+    ]
+  },
+  "upper_arm": {
+    "source": "source/upper_arm.png",
+    "source_size": [
+      809,
+      1942
+    ],
+    "alpha_crop": [
+      129,
+      169,
+      676,
+      1816
+    ],
+    "padding": 4,
+    "size": [
+      555,
+      1655
+    ]
+  },
+  "forearm": {
+    "source": "source/forearm.png",
+    "source_size": [
+      793,
+      1983
+    ],
+    "alpha_crop": [
+      126,
+      90,
+      628,
+      1903
+    ],
+    "padding": 4,
+    "size": [
+      510,
+      1821
+    ]
+  },
+  "thigh": {
+    "source": "source/thigh.png",
+    "source_size": [
+      778,
+      2021
+    ],
+    "alpha_crop": [
+      93,
+      77,
+      685,
+      1957
+    ],
+    "padding": 4,
+    "size": [
+      600,
+      1888
+    ]
+  },
+  "shin": {
+    "source": "source/shin.png",
+    "source_size": [
+      724,
+      2172
+    ],
+    "alpha_crop": [
+      131,
+      110,
+      545,
+      2072
+    ],
+    "padding": 4,
+    "size": [
+      422,
+      1970
+    ]
+  },
+  "foot": {
+    "source": "source/foot.png",
+    "source_size": [
+      1860,
+      846
+    ],
+    "alpha_crop": [
+      247,
+      113,
+      1618,
+      752
+    ],
+    "padding": 4,
+    "size": [
+      1379,
+      647
+    ]
+  },
+  "hand_sword": {
+    "source": "source/hand_sword.png",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "alpha_crop": [
+      303,
+      105,
+      1191,
+      895
+    ],
+    "padding": 4,
+    "size": [
+      896,
+      798
+    ]
+  },
+  "hand_bow": {
+    "source": "source/hand_bow.png",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "alpha_crop": [
+      316,
+      218,
+      1128,
+      779
+    ],
+    "padding": 4,
+    "size": [
+      820,
+      569
+    ]
+  },
+  "hand_pull": {
+    "source": "source/hand_pull.png",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "alpha_crop": [
+      148,
+      185,
+      1376,
+      831
+    ],
+    "padding": 4,
+    "size": [
+      1236,
+      654
+    ]
+  },
+  "hand_relaxed": {
+    "source": "source/hand_relaxed.png",
+    "source_size": [
+      1774,
+      887
+    ],
+    "alpha_crop": [
+      320,
+      193,
+      1390,
+      722
+    ],
+    "padding": 4,
+    "size": [
+      1078,
+      537
+    ]
+  },
+  "sword": {
+    "source": "source/sword.png",
+    "source_size": [
+      1024,
+      1536
+    ],
+    "alpha_crop": [
+      389,
+      18,
+      635,
+      1507
+    ],
+    "padding": 4,
+    "size": [
+      254,
+      1497
+    ]
+  },
+  "bow": {
+    "source": "source/bow.png",
+    "source_size": [
+      948,
+      1659
+    ],
+    "alpha_crop": [
+      293,
+      100,
+      648,
+      1559
+    ],
+    "padding": 4,
+    "size": [
+      363,
+      1467
+    ]
+  },
+  "arrow": {
+    "source": "source/arrow.png",
+    "source_size": [
+      2098,
+      749
+    ],
+    "alpha_crop": [
+      52,
+      309,
+      2051,
+      436
+    ],
+    "padding": 4,
+    "size": [
+      2007,
+      135
+    ]
+  }
+}

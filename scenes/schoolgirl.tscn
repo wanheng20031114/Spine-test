@@ -4,9 +4,7 @@
 
 [ext_resource type="PackedScene" path="res://scenes/schoolgirl_rig.tscn" id="rig"]
 
-[ext_resource type="Texture2D" path="res://assets/schoolgirl/parts_atlas.png" id="atlas"]
-
-[ext_resource type="Texture2D" path="res://assets/schoolgirl/arrow.png" id="projectile"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_profile/arrow.png" id="projectile"]
 
 [sub_resource type="CapsuleShape2D" id="body"]
 radius = 18.0
@@ -18,9 +16,12 @@ radius = 56.0
 [node name="Schoolgirl" type="CharacterBody2D"]
 script = ExtResource("script")
 display_name = "黑长直少女"
-parts_atlas = ExtResource("atlas")
+move_speed = 160.0
+directional_locomotion = true
+projectile_height = 6.0
+string_nock_path = NodePath("Rig/Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand/StringNock")
 projectile_texture = ExtResource("projectile")
-parts_legend = "01 头部  /  02 长发\n03 躯干  /  04 后裙摆\n\n05–08 上臂 / 前臂\n09–12 腿 / 长袜皮鞋\n\n13 剑  /  14 弓\n15 箭矢  /  16 拉弦手"
+parts_legend = "严格侧面 · 独立生图\n\n16 类透明原图\n20 个原生骨骼\n\n四种独立手型\n手腕 / 脚踝可单独调整\n长发使用连续网格\n\n左右肢体独立控制\n近侧 / 远侧复用同款贴图"
 z_index = 10
 collision_layer = 2
 collision_mask = 1

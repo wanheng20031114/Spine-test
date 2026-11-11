@@ -9,9 +9,10 @@ var damage := 0
 @onready var artwork: Sprite2D = $Artwork
 
 
-func launch(origin: Vector2, direction: Vector2, power: float, texture: Texture2D) -> void:
+func launch(origin: Vector2, direction: Vector2, power: float, texture: Texture2D, height: float) -> void:
 	artwork.texture = texture
-	artwork.scale = Vector2.ONE * (12.0 / texture.get_height())
+	artwork.scale = Vector2.ONE * (height / texture.get_height())
+	artwork.position.y = -height * 0.5
 	global_position = origin
 	rotation = direction.angle()
 	velocity = direction * lerpf(650.0, 1120.0, power)

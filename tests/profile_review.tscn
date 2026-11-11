@@ -1,0 +1,118 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/schoolgirl_rig.tscn" id="rig"]
+[ext_resource type="Script" path="res://tests/profile_review.gd" id="script"]
+[ext_resource type="Font" path="res://assets/ui_font.tres" id="font"]
+
+[node name="ProfileReview" type="Node2D"]
+script = ExtResource("script")
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -100
+offset_right = 1440.0
+offset_bottom = 900.0
+color = Color(0.065, 0.085, 0.11, 1)
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 14.0
+text = "侧视重做 · 关键姿势 / 实际 Godot 渲染"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 24
+
+[node name="Idle" parent="." instance=ExtResource("rig")]
+position = Vector2(180,430)
+scale = Vector2(1.35,1.35)
+
+[node name="Label0" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 68.0
+text = "01  待机 · 握柄与手腕"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+
+[node name="Floor0" type="Line2D" parent="."]
+points = PackedVector2Array(28,430,452,430)
+width = 1
+default_color = Color(0.22,0.37,0.40,1)
+
+[node name="Walk" parent="." instance=ExtResource("rig")]
+position = Vector2(660,430)
+scale = Vector2(1.35,1.35)
+
+[node name="Label1" type="Label" parent="."]
+offset_left = 508.0
+offset_top = 68.0
+text = "02  行走 · 独立脚踝"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+
+[node name="Floor1" type="Line2D" parent="."]
+points = PackedVector2Array(508,430,932,430)
+width = 1
+default_color = Color(0.22,0.37,0.40,1)
+
+[node name="Windup" parent="." instance=ExtResource("rig")]
+position = Vector2(1140,430)
+scale = Vector2(1.35,1.35)
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 988.0
+offset_top = 68.0
+text = "03  挥剑预备"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+
+[node name="Floor2" type="Line2D" parent="."]
+points = PackedVector2Array(988,430,1412,430)
+width = 1
+default_color = Color(0.22,0.37,0.40,1)
+
+[node name="Strike" parent="." instance=ExtResource("rig")]
+position = Vector2(180,850)
+scale = Vector2(1.35,1.35)
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 488.0
+text = "04  挥剑发力"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+
+[node name="Floor3" type="Line2D" parent="."]
+points = PackedVector2Array(28,850,452,850)
+width = 1
+default_color = Color(0.22,0.37,0.40,1)
+
+[node name="Bow" parent="." instance=ExtResource("rig")]
+position = Vector2(660,850)
+scale = Vector2(1.35,1.35)
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 508.0
+offset_top = 488.0
+text = "05  满弓 · 手弦连接"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+
+[node name="Floor4" type="Line2D" parent="."]
+points = PackedVector2Array(508,850,932,850)
+width = 1
+default_color = Color(0.22,0.37,0.40,1)
+
+[node name="MirrorBow" parent="." instance=ExtResource("rig")]
+position = Vector2(1140,850)
+scale = Vector2(-1.35,1.35)
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 988.0
+offset_top = 488.0
+text = "06  左向镜像"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+
+[node name="Floor5" type="Line2D" parent="."]
+points = PackedVector2Array(988,850,1412,850)
+width = 1
+default_color = Color(0.22,0.37,0.40,1)

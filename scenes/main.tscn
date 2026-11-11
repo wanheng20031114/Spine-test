@@ -6,6 +6,8 @@
 
 [ext_resource type="PackedScene" path="res://scenes/schoolgirl.tscn" id="schoolgirl"]
 
+[ext_resource type="PackedScene" path="res://scenes/profile_parts.tscn" id="profile_parts"]
+
 [ext_resource type="PackedScene" path="res://scenes/target.tscn" id="target"]
 
 [ext_resource type="PackedScene" path="res://scenes/arrow.tscn" id="arrow"]
@@ -673,7 +675,7 @@ offset_left = 1170
 offset_top = 57
 offset_right = 1405
 offset_bottom = 112
-text = "PROTOTYPE   02\nGODOT  4.6"
+text = "PROTOTYPE   03\nGODOT  4.6"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 15
@@ -999,7 +1001,7 @@ offset_left = 33
 offset_top = 870
 offset_right = 933
 offset_bottom = 892
-text = "2 位角色  /  每位 16 个独立部件  /  原生骨骼与可编辑动画"
+text = "黑长直：严格侧面 / 独立手型与脚踝 / 原生骨骼及长发网格"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 12
@@ -1054,7 +1056,7 @@ offset_left = 65
 offset_top = 30
 offset_right = 1165
 offset_bottom = 80
-text = "角色分件  /  PARTS ATLAS"
+text = "角色分件  /  PARTS"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 28
@@ -1065,7 +1067,7 @@ offset_left = 68
 offset_top = 85
 offset_right = 1168
 offset_bottom = 115
-text = "TAB 关闭  ·  F2 切换角色  ·  原始 AI 生成透明图集"
+text = "TAB 关闭  ·  F2 切换角色  ·  独立透明素材预览"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 16
@@ -1092,6 +1094,12 @@ theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 16
 theme_override_colors/font_color = Color(0.53, 0.73, 0.76, 1)
 theme_override_constants/line_spacing = 14
+
+[node name="ProfileParts" parent="HUD/AtlasPanel" instance=ExtResource("profile_parts")]
+offset_left = 480.0
+offset_top = 135.0
+offset_right = 1318.0
+offset_bottom = 799.0
 
 [connection signal="pressed" from="HUD/PartsButton" to="." method="_toggle_parts"]
 

@@ -12,6 +12,10 @@ const DRAW_DURATION := 0.8
 const GRAVITY := 1300.0
 const SLASH_DURATION := 0.5
 
+@export var move_speed := MOVE_SPEED
+@export var directional_locomotion := false
+@export var projectile_height := 12.0
+@export_node_path("Node2D") var string_nock_path := NodePath("Rig/Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand")
 @export var display_name := "白发兽耳干员"
 @export var parts_atlas: Texture2D = preload("res://assets/operator/parts_atlas.png")
 @export var projectile_texture: Texture2D = preload("res://assets/operator/arrow.png")
@@ -37,7 +41,7 @@ var bones_visible := false
 @onready var bow: Node2D = $Rig/Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow
 @onready var string_line: Line2D = $Rig/Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow/String
 @onready var nocked_arrow: Sprite2D = $Rig/Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow/NockedArrow
-@onready var draw_hand: Marker2D = $Rig/Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand
+@onready var draw_hand: Node2D = get_node(string_nock_path)
 @onready var pull_hand: Sprite2D = $Rig/Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand/PullHand
 @onready var melee_aim: Node2D = $MeleeAim
 @onready var hitbox: Area2D = $MeleeAim/Hitbox
@@ -70,21 +74,26 @@ func _physics_process(delta: float) -> void:
 	var speed_multiplier := 0.45 if action == Action.DRAW else 1.0
 	if action == Action.SLASH:
 		speed_multiplier = 0.28
-	velocity.x = move_toward(velocity.x, movement * MOVE_SPEED * speed_multiplier, 1800.0 * delta)
+	velocity.x = move_toward(velocity.x, movement * move_speed * speed_multiplier, 1800.0 * delta)
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
+	var previous_x := position.x
 	move_and_slide()
 	position.x = clampf(position.x, 78.0, 1040.0)
 	if action != Action.SLASH:
 		_update_aim()
-	var walking := absf(velocity.x) > 10.0
+	var travel_speed := (position.x - previous_x) / delta
+	var walking := absf(travel_speed) > 1.0
 	var locomotion_name := "walk" if walking else "idle"
 	if locomotion.current_animation != locomotion_name:
 		locomotion.play(locomotion_name, 0.12)
-	locomotion.speed_scale = maxf(absf(velocity.x) / MOVE_SPEED, 0.5) if walking else 1.0
+	locomotion.speed_scale = absf(travel_speed) / move_speed if walking else 1.0
+	if walking and directional_locomotion and travel_speed * facing < 0:
+		locomotion.speed_scale *= -1.0
 	action_time += delta
 	match action:
 		Action.READY:
+			actions.speed_scale = locomotion.speed_scale if walking and weapon == Weapon.SWORD else 1.0
 			var pose := "sword_walk" if walking else "sword_idle"
 			if weapon == Weapon.BOW:
 				pose = "bow_ready"
@@ -113,7 +122,7 @@ func _process(_delta: float) -> void:
 	if weapon == Weapon.BOW:
 		var nock := bow.to_local(draw_hand.global_position)
 		string_line.set_point_position(1, nock)
-		nocked_arrow.position = nock + Vector2(0, -6)
+		nocked_arrow.position = nock + Vector2(0, -nocked_arrow.texture.get_height() * nocked_arrow.scale.y * 0.5)
 		nocked_arrow.visible = action != Action.RELEASE
 
 
@@ -133,6 +142,7 @@ func _begin_attack() -> void:
 	if action != Action.READY:
 		return
 	action_time = 0.0
+	actions.speed_scale = 1.0
 	if weapon == Weapon.SWORD:
 		action = Action.SLASH
 		hit_applied = false
