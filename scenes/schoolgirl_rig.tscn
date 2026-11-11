@@ -1,0 +1,123 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/operator_rig.tscn" id="base"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/head.png" id="head"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/hair_back.png" id="hair_back"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/torso.png" id="torso"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/coat_tail.png" id="coat_tail"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/upper_arm_far.png" id="upper_arm_far"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/forearm_far.png" id="forearm_far"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/upper_arm_near.png" id="upper_arm_near"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/forearm_near.png" id="forearm_near"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/thigh_far.png" id="thigh_far"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/shin_far.png" id="shin_far"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/thigh_near.png" id="thigh_near"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/shin_near.png" id="shin_near"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/sword.png" id="sword"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/bow.png" id="bow"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/arrow.png" id="arrow"]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/pull_hand.png" id="pull_hand"]
+
+[node name="SchoolgirlRig" instance=ExtResource("base")]
+
+[node name="Artwork" parent="Skeleton2D/Hips/Coat"]
+texture = ExtResource("coat_tail")
+position = Vector2(-17.000000, -3.000000)
+scale = Vector2(0.141667, 0.141667)
+
+[node name="Artwork" parent="Skeleton2D/Hips/FarThigh"]
+texture = ExtResource("thigh_far")
+position = Vector2(-10.837037, -5.000000)
+scale = Vector2(0.140741, 0.140741)
+
+[node name="Artwork" parent="Skeleton2D/Hips/FarThigh/Shin"]
+texture = ExtResource("shin_far")
+position = Vector2(-12.000000, -8.000000)
+scale = Vector2(0.160535, 0.160535)
+
+[node name="Artwork" parent="Skeleton2D/Hips/NearThigh"]
+texture = ExtResource("thigh_near")
+position = Vector2(-10.977778, -5.000000)
+scale = Vector2(0.140741, 0.140741)
+
+[node name="Artwork" parent="Skeleton2D/Hips/NearThigh/Shin"]
+texture = ExtResource("shin_near")
+position = Vector2(-12.000000, -8.000000)
+scale = Vector2(0.160000, 0.160000)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso"]
+texture = ExtResource("torso")
+position = Vector2(-36.000000, -79.000000)
+scale = Vector2(0.320513, 0.320513)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/Head/Hair"]
+texture = ExtResource("hair_back")
+position = Vector2(-61.000000, -59.000000)
+scale = Vector2(0.489960, 0.626911)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/Head"]
+texture = ExtResource("head")
+position = Vector2(-60.000000, -111.000000)
+scale = Vector2(0.396040, 0.396040)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper"]
+texture = ExtResource("upper_arm_far")
+position = Vector2(-8.027027, -6.000000)
+scale = Vector2(0.121622, 0.121622)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower"]
+texture = ExtResource("forearm_far")
+position = Vector2(-8.289474, -5.000000)
+scale = Vector2(0.115132, 0.115132)
+
+[node name="PullHand" parent="Skeleton2D/Hips/Torso/ArmAim/FarUpper/FarLower/Hand"]
+texture = ExtResource("pull_hand")
+position = Vector2(-6.000000, -4.000000)
+scale = Vector2(0.080000, 0.080000)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper"]
+texture = ExtResource("upper_arm_near")
+position = Vector2(-8.331081, -6.000000)
+scale = Vector2(0.121622, 0.121622)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower"]
+texture = ExtResource("forearm_near")
+position = Vector2(-9.645215, -5.000000)
+scale = Vector2(0.115512, 0.115512)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Sword"]
+texture = ExtResource("sword")
+position = Vector2(-17.000000, -99.000000)
+scale = Vector2(0.350000, 0.350000)
+
+[node name="Artwork" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow"]
+texture = ExtResource("bow")
+position = Vector2(-30.000000, -61.000000)
+scale = Vector2(0.387302, 0.387302)
+
+[node name="NockedArrow" parent="Skeleton2D/Hips/Torso/ArmAim/NearUpper/NearLower/Hand/Bow"]
+texture = ExtResource("arrow")
+position = Vector2(-41.000000, -6.000000)
+scale = Vector2(0.203390, 0.203390)
+
+[node name="Hair" parent="Skeleton2D/Hips/Torso/Head"]
+z_index = -14
+
+[node name="Guide" parent="Skeleton2D/Hips/Torso/Head/Hair"]
+points = PackedVector2Array(0, 0, 0, 130)

@@ -4,13 +4,15 @@
 
 [ext_resource type="PackedScene" path="res://scenes/operator.tscn" id="operator"]
 
+[ext_resource type="PackedScene" path="res://scenes/schoolgirl.tscn" id="schoolgirl"]
+
 [ext_resource type="PackedScene" path="res://scenes/target.tscn" id="target"]
 
 [ext_resource type="PackedScene" path="res://scenes/arrow.tscn" id="arrow"]
 
 [ext_resource type="Font" path="res://assets/ui_font.tres" id="font"]
 
-[ext_resource type="Texture2D" path="res://assets/operator/parts_atlas.png" id="atlas"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl/parts_atlas.png" id="atlas"]
 
 [sub_resource type="RectangleShape2D" id="floor"]
 size = Vector2(1110, 36)
@@ -558,6 +560,11 @@ position = Vector2(990, 658)
 
 [node name="Operator" parent="." instance=ExtResource("operator")]
 position = Vector2(410, 658)
+visible = false
+process_mode = 4
+
+[node name="Schoolgirl" parent="." instance=ExtResource("schoolgirl")]
+position = Vector2(410, 658)
 
 [node name="Arrows" type="Node2D" parent="."]
 
@@ -655,7 +662,7 @@ offset_left = 33
 offset_top = 113
 offset_right = 933
 offset_bottom = 140
-text = "白发兽耳干员 · 分件骨骼动作试验场"
+text = "黑长直少女 · 分件骨骼动作试验场"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 16
@@ -666,7 +673,7 @@ offset_left = 1170
 offset_top = 57
 offset_right = 1405
 offset_bottom = 112
-text = "PROTOTYPE   01\nGODOT  4.6"
+text = "PROTOTYPE   02\nGODOT  4.6"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 15
@@ -717,22 +724,24 @@ offset_left = 1158
 offset_top = 174
 offset_right = 1382
 offset_bottom = 204
-text = "干员状态"
+text = "角色状态"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 23
 theme_override_colors/font_color = Color(0.88, 0.94, 0.94, 1)
 
-[node name="SideSubtitle" type="Label" parent="HUD"]
-offset_left = 1159
+[node name="CharacterButton" type="Button" parent="HUD"]
+offset_left = 1158
 offset_top = 212
 offset_right = 1384
-offset_bottom = 232
-text = "LIVE  TELEMETRY"
-mouse_filter = 2
+offset_bottom = 247
+text = "黑长直少女  / F2"
+tooltip_text = "切换到另一位角色（F2）"
+focus_mode = 0
 theme_override_fonts/font = ExtResource("font")
-theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.43, 0.64, 0.67, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("button_hover")
 
 [node name="WeaponCaption" type="Label" parent="HUD"]
 offset_left = 1158
@@ -990,11 +999,41 @@ offset_left = 33
 offset_top = 870
 offset_right = 933
 offset_bottom = 892
-text = "16 个独立部件  /  原生骨骼  /  可编辑动画轨道"
+text = "2 位角色  /  每位 16 个独立部件  /  原生骨骼与可编辑动画"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 12
 theme_override_colors/font_color = Color(0.33, 0.49, 0.54, 1)
+
+[node name="KeyCard5" type="ColorRect" parent="HUD"]
+offset_left = 1190
+offset_top = 785
+offset_right = 1408
+offset_bottom = 857
+color = Color(0.075, 0.118, 0.143, 1)
+mouse_filter = 2
+
+[node name="Key5" type="Label" parent="HUD"]
+offset_left = 1205
+offset_top = 795
+offset_right = 1393
+offset_bottom = 818
+text = "F2"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.73, 0.96, 0.91, 1)
+
+[node name="KeyDesc5" type="Label" parent="HUD"]
+offset_left = 1205
+offset_top = 826
+offset_right = 1393
+offset_bottom = 848
+text = "切换角色"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.48, 0.65, 0.69, 1)
 
 [node name="AtlasPanel" type="Control" parent="HUD"]
 visible = false
@@ -1026,7 +1065,7 @@ offset_left = 68
 offset_top = 85
 offset_right = 1168
 offset_bottom = 115
-text = "TAB 关闭  ·  原始 AI 生成透明图集  ·  16 个独立部件"
+text = "TAB 关闭  ·  F2 切换角色  ·  原始 AI 生成透明图集"
 mouse_filter = 2
 theme_override_fonts/font = ExtResource("font")
 theme_override_font_sizes/font_size = 16
@@ -1057,3 +1096,5 @@ theme_override_constants/line_spacing = 14
 [connection signal="pressed" from="HUD/PartsButton" to="." method="_toggle_parts"]
 
 [connection signal="pressed" from="HUD/ResetButton" to="." method="_reset_lab"]
+
+[connection signal="pressed" from="HUD/CharacterButton" to="." method="_switch_character"]

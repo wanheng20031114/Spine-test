@@ -6,9 +6,12 @@ var velocity := Vector2.ZERO
 var remaining := 0.0
 var damage := 0
 @onready var sweep: RayCast2D = $Sweep
+@onready var artwork: Sprite2D = $Artwork
 
 
-func launch(origin: Vector2, direction: Vector2, power: float) -> void:
+func launch(origin: Vector2, direction: Vector2, power: float, texture: Texture2D) -> void:
+	artwork.texture = texture
+	artwork.scale = Vector2.ONE * (12.0 / texture.get_height())
 	global_position = origin
 	rotation = direction.angle()
 	velocity = direction * lerpf(650.0, 1120.0, power)
@@ -35,7 +38,8 @@ func _physics_process(delta: float) -> void:
 	velocity.y += 130.0 * delta
 	rotation = velocity.angle()
 	# Sweep the full distance, including the tip. Fast arrows cannot tunnel.
-	sweep.target_position = to_local(global_position + velocity * delta + velocity.normalized() * 62.0)
+	var tip_length := artwork.texture.get_width() * artwork.scale.x - 2.0
+	sweep.target_position = to_local(global_position + velocity * delta + velocity.normalized() * tip_length)
 	sweep.force_raycast_update()
 	if sweep.is_colliding():
 		var collider := sweep.get_collider()

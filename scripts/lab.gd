@@ -3,7 +3,9 @@ extends Node2D
 var next_arrow := 0
 var total_hits := 0
 var total_damage := 0
-@onready var operator: Operator = $Operator
+var character_index := 1
+@onready var characters: Array[Operator] = [$Operator, $Schoolgirl]
+@onready var operator: Operator = $Schoolgirl
 @onready var arrows: Node2D = $Arrows
 @onready var weapon_label: Label = $HUD/Weapon
 @onready var state_label: Label = $HUD/State
@@ -16,9 +18,11 @@ var total_damage := 0
 
 
 func _ready() -> void:
-	operator.arrow_requested.connect(_shoot)
+	for character: Operator in characters:
+		character.arrow_requested.connect(_shoot)
 	for target: TrainingTarget in get_tree().get_nodes_in_group("targets"):
 		target.struck.connect(_on_hit)
+	_update_character_ui()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -26,6 +30,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_reset_lab()
 	elif event.is_action_pressed("toggle_parts"):
 		_toggle_parts()
+	elif event.is_action_pressed("switch_character"):
+		_switch_character()
 
 
 func _process(_delta: float) -> void:
@@ -45,7 +51,7 @@ func _process(_delta: float) -> void:
 func _shoot(origin: Vector2, direction: Vector2, power: float) -> void:
 	# Projectile instances are authored in main.tscn; reuse the fixed pool.
 	var arrow := arrows.get_child(next_arrow) as TrainingArrow
-	arrow.launch(origin, direction, power)
+	arrow.launch(origin, direction, power, operator.projectile_texture)
 	next_arrow = (next_arrow + 1) % arrows.get_child_count()
 
 
@@ -55,7 +61,8 @@ func _on_hit(damage: int, _source: String) -> void:
 
 
 func _reset_lab() -> void:
-	operator.reset()
+	for character: Operator in characters:
+		character.reset()
 	total_hits = 0
 	total_damage = 0
 	for arrow: TrainingArrow in arrows.get_children():
@@ -70,3 +77,35 @@ func _toggle_parts() -> void:
 	operator.set_process_unhandled_input(not atlas_panel.visible)
 	operator.set_physics_process(not atlas_panel.visible)
 	operator.velocity = Vector2.ZERO
+
+
+func _switch_character() -> void:
+	var previous := operator
+	previous._cancel_action()
+	character_index = (character_index + 1) % characters.size()
+	operator = characters[character_index]
+	operator.position = previous.position
+	operator.velocity = Vector2.ZERO
+	operator.aim_target = previous.aim_target
+	operator.facing = previous.facing
+	operator.weapon = previous.weapon
+	operator.bones_visible = previous.bones_visible
+	operator._cancel_action()
+	operator._update_equipment()
+	# Both characters are authored in the scene. Disabled CollisionObject2Ds
+	# use native DISABLE_MODE_REMOVE, so the hidden actor leaves the physics world.
+	previous.visible = false
+	previous.process_mode = Node.PROCESS_MODE_DISABLED
+	operator.visible = true
+	operator.process_mode = Node.PROCESS_MODE_INHERIT
+	operator.set_process_unhandled_input(not atlas_panel.visible)
+	operator.set_physics_process(not atlas_panel.visible)
+	_update_character_ui()
+
+
+func _update_character_ui() -> void:
+	$HUD/CharacterButton.text = operator.display_name + "  / F2"
+	$HUD/Subtitle.text = operator.display_name + " · 分件骨骼动作试验场"
+	$HUD/AtlasPanel/Atlas.texture = operator.parts_atlas
+	$HUD/AtlasPanel/AtlasTitle.text = operator.display_name + "  /  PARTS ATLAS"
+	$HUD/AtlasPanel/AtlasLegend.text = operator.parts_legend

@@ -12,6 +12,11 @@ const DRAW_DURATION := 0.8
 const GRAVITY := 1300.0
 const SLASH_DURATION := 0.5
 
+@export var display_name := "白发兽耳干员"
+@export var parts_atlas: Texture2D = preload("res://assets/operator/parts_atlas.png")
+@export var projectile_texture: Texture2D = preload("res://assets/operator/arrow.png")
+@export_multiline var parts_legend := "01 头部  /  02 后发\n03 躯干  /  04 衣摆\n\n05–08 上臂 / 前臂\n09–12 大腿 / 靴子\n\n13 剑  /  14 弓\n15 箭矢  /  16 拉弦手"
+
 var weapon := Weapon.SWORD
 var action := Action.READY
 var charge := 0.0

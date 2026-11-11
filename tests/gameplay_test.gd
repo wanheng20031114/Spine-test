@@ -2,7 +2,7 @@ extends Node
 
 var failures: Array[String] = []
 @onready var lab: Node2D = $FieldLab
-@onready var actor: Operator = $FieldLab/Operator
+@onready var actor: Operator = $FieldLab/Schoolgirl
 @onready var target: TrainingTarget = $FieldLab/TargetNear
 
 
@@ -46,6 +46,7 @@ func _attack(pressed: bool) -> void:
 
 func _run() -> void:
 	await _frames(5)
+	_check(lab.operator == actor and actor.visible and not $FieldLab/Operator.can_process(), "New schoolgirl is active by default; original character is disabled")
 	_check(actor.is_on_floor(), "CharacterBody2D rests on native floor collider")
 	_check(actor.get_node("Rig/Skeleton2D").get_bone_count() == 14, "All 14 native bones loaded")
 	var initial_x := actor.position.x
@@ -129,6 +130,58 @@ func _run() -> void:
 	_check(target.hit_count == 0 and lab.total_hits == 0 and actor.shot_count == 0, "R resets target telemetry and combat")
 	for arrow: TrainingArrow in lab.get_node("Arrows").get_children():
 		_check(not arrow.active, "Reset deactivates " + arrow.name)
+	# Switch during a live draw: the hidden actor must stop processing input,
+	# and releasing the button must not fire an arrow from either character.
+	actor.position.x = 500
+	_key(KEY_Q,true)
+	_key(KEY_Q,false)
+	await _frames(3)
+	_attack(true)
+	await _frames(8)
+	_key(KEY_F2,true)
+	_key(KEY_F2,false)
+	_attack(false)
+	await _frames(3)
+	var original: Operator = $FieldLab/Operator
+	_check(lab.operator == original and original.visible and not actor.visible, "F2 selects the original character")
+	_check(original.position.x == 500 and original.weapon == Operator.Weapon.BOW, "Switch preserves position and equipped weapon")
+	_check(not actor.can_process() and original.action == Operator.Action.READY and original.shot_count == 0, "Switch cancels draw without a ghost arrow or hidden actor updates")
+	_check(original.bones_visible, "Rig guide preference survives character switch")
+	_check(lab.get_node("HUD/AtlasPanel/Atlas").texture == original.parts_atlas, "Parts atlas follows the selected character")
+	original.position = Vector2(680,658)
+	_mouse(Vector2(780,542))
+	_key(KEY_Q,true)
+	_key(KEY_Q,false)
+	await _frames(5)
+	_attack(true)
+	await _frames(2)
+	_attack(false)
+	await _frames(36)
+	_check(target.hit_count == 1 and original.swing_count == 1, "Original character can still attack after switching")
+	original.position = Vector2(410,658)
+	_key(KEY_Q,true)
+	_key(KEY_Q,false)
+	await _frames(5)
+	_attack(true)
+	await _frames(58)
+	_attack(false)
+	await _frames(45)
+	_check(target.total_damage == 100 and original.shot_count == 1, "Original character can still shoot its own arrow after switching")
+	_check(lab.get_node("Arrows/Arrow03/Artwork").texture == original.projectile_texture, "Projectile pool uses the shooting character's texture")
+	_key(KEY_TAB,true)
+	_key(KEY_TAB,false)
+	_key(KEY_F2,true)
+	_key(KEY_F2,false)
+	await _frames(3)
+	_check(lab.operator == actor and lab.atlas_panel.visible and not actor.is_physics_processing(), "Switching in parts view updates character while keeping gameplay frozen")
+	_check(lab.get_node("HUD/AtlasPanel/Atlas").texture == actor.parts_atlas, "Schoolgirl parts atlas is restored")
+	_key(KEY_TAB,true)
+	_key(KEY_TAB,false)
+	lab.get_node("HUD/CharacterButton").pressed.emit()
+	await _frames(3)
+	_check(lab.operator == original and original.is_physics_processing(), "Native character button switches and resumes gameplay")
+	lab._reset_lab()
+	_check(original.shot_count == 0 and actor.shot_count == 0 and original.swing_count == 0, "Reset clears both characters' counters")
 	if failures.is_empty():
 		print("GAMEPLAY_TEST_OK")
 	else:
