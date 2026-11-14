@@ -6,7 +6,8 @@ Final asset: assets/experiment_icon.svg (user-authorized editable vector reconst
 Matching PNG: assets/experiment_icon.png (1024px export using Godot's SVG renderer)
 
 PRODUCTION SPECIFICATION
-Only two flat colors: primary #00BFFF and background #FFFFFF. Antialiasing at boundaries only.
+Only two flat colors: primary #1E90FF (RGB 30, 144, 255) and background #FFFFFF. Antialiasing at boundaries only.
+Palette updated at the user's request; the original concept prompt and generated reference below retain their original colors.
 Eight paths: two mirrored open contours, three cube planes and three DBR letter paths. Depth comes from white seams, without extra shades or detailed machinery.
 DBR remains inside the compact emblem, using original upright rounded signage letterforms: 160-unit cap height, 28-unit stroke and open counters. No external font dependency.
 Validated at 32, 64, 128 and 512px using Godot Image.load_svg_from_string.

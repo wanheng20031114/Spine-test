@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
   <title>DBR 实验性游戏技术项目</title>
-  <desc>白底与 #00BFFF 单色。两道开放折角围合一个立方模块，DBR 圆角字形嵌入其中，表达可组合、可试验的技术空间。</desc>
+  <desc>白底与 #1E90FF 单色。两道开放折角围合一个立方模块，DBR 圆角字形嵌入其中，表达可组合、可试验的技术空间。</desc>
   <rect width="1024" height="1024" fill="#FFFFFF"/>
 
   <!-- Two compact contours leave the experimental space open at both ends. -->
-  <g fill="#00BFFF">
+  <g fill="#1E90FF">
     <path d="M330 126Q348 110 364 126Q374 134 374 148V186Q374 200 364 210L210 348Q196 362 196 382V726Q196 742 208 754L258 804Q270 816 286 816H404Q420 816 426 830Q432 842 420 854L382 892Q374 900 362 900H250Q224 900 206 882L132 808Q112 788 112 760V358Q112 322 138 298Z"/>
     <path d="M330 126Q348 110 364 126Q374 134 374 148V186Q374 200 364 210L210 348Q196 362 196 382V726Q196 742 208 754L258 804Q270 816 286 816H404Q420 816 426 830Q432 842 420 854L382 892Q374 900 362 900H250Q224 900 206 882L132 808Q112 788 112 760V358Q112 322 138 298Z" transform="translate(1024 0) scale(-1 1)"/>
   </g>
 
   <!-- Three planes, one color: negative space supplies the sense of depth. -->
-  <g fill="#00BFFF">
+  <g fill="#1E90FF">
     <path d="M512 232 640 306 512 380 384 306Z"/>
     <path d="M376 330 500 402V540L376 468Z"/>
     <path d="M524 402 648 330V468L524 540Z"/>
   </g>
 
   <!-- Normal-height rounded signage capitals, drawn as portable vector paths. -->
-  <g fill="none" stroke="#00BFFF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" transform="translate(14 0)">
+  <g fill="none" stroke="#1E90FF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" transform="translate(14 0)">
     <path d="M274 598V758H310C362 758 394 728 394 678S362 598 310 598Z"/>
     <path d="M444 758V598H486C524 598 546 610 546 634S524 674 488 674H444M488 674H491C532 674 552 688 552 716S532 758 491 758H444"/>
     <path d="M608 758V598H654C691 598 714 612 714 636S691 674 654 674H608M652 674 722 758"/>
