@@ -1,0 +1,6 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://tests/sprite_motion.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/sprite_lab.tscn" id="lab"]
+[node name="SpriteMotion" type="Node"]
+script = ExtResource("script")
+[node name="Lab" parent="." instance=ExtResource("lab")]

@@ -1,0 +1,556 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/idle_sword.png" id="idle_sword"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/walk_sword.png" id="walk_sword"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/jump_sword.png" id="jump_sword"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/slash.png" id="slash"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/idle_bow.png" id="idle_bow"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/walk_bow.png" id="walk_bow"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/jump_bow.png" id="jump_bow"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/bow_draw.png" id="bow_draw"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/bow_release.png" id="bow_release"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/bow_draw_up.png" id="bow_draw_up"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/bow_release_up.png" id="bow_release_up"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/bow_draw_down.png" id="bow_draw_down"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/bow_release_down.png" id="bow_release_down"]
+
+[sub_resource type="AtlasTexture" id="idle_sword_0"]
+atlas = ExtResource("idle_sword")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_sword_1"]
+atlas = ExtResource("idle_sword")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_sword_2"]
+atlas = ExtResource("idle_sword")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_sword_3"]
+atlas = ExtResource("idle_sword")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_sword_4"]
+atlas = ExtResource("idle_sword")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_sword_5"]
+atlas = ExtResource("idle_sword")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_sword_6"]
+atlas = ExtResource("idle_sword")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_sword_7"]
+atlas = ExtResource("idle_sword")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_0"]
+atlas = ExtResource("walk_sword")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_1"]
+atlas = ExtResource("walk_sword")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_2"]
+atlas = ExtResource("walk_sword")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_3"]
+atlas = ExtResource("walk_sword")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_4"]
+atlas = ExtResource("walk_sword")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_5"]
+atlas = ExtResource("walk_sword")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_6"]
+atlas = ExtResource("walk_sword")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_sword_7"]
+atlas = ExtResource("walk_sword")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_0"]
+atlas = ExtResource("jump_sword")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_1"]
+atlas = ExtResource("jump_sword")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_2"]
+atlas = ExtResource("jump_sword")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_3"]
+atlas = ExtResource("jump_sword")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_4"]
+atlas = ExtResource("jump_sword")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_5"]
+atlas = ExtResource("jump_sword")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_6"]
+atlas = ExtResource("jump_sword")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_sword_7"]
+atlas = ExtResource("jump_sword")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_0"]
+atlas = ExtResource("slash")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_1"]
+atlas = ExtResource("slash")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_2"]
+atlas = ExtResource("slash")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_3"]
+atlas = ExtResource("slash")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_4"]
+atlas = ExtResource("slash")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_5"]
+atlas = ExtResource("slash")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_6"]
+atlas = ExtResource("slash")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="slash_7"]
+atlas = ExtResource("slash")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_0"]
+atlas = ExtResource("idle_bow")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_1"]
+atlas = ExtResource("idle_bow")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_2"]
+atlas = ExtResource("idle_bow")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_3"]
+atlas = ExtResource("idle_bow")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_4"]
+atlas = ExtResource("idle_bow")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_5"]
+atlas = ExtResource("idle_bow")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_6"]
+atlas = ExtResource("idle_bow")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="idle_bow_7"]
+atlas = ExtResource("idle_bow")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_0"]
+atlas = ExtResource("walk_bow")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_1"]
+atlas = ExtResource("walk_bow")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_2"]
+atlas = ExtResource("walk_bow")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_3"]
+atlas = ExtResource("walk_bow")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_4"]
+atlas = ExtResource("walk_bow")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_5"]
+atlas = ExtResource("walk_bow")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_6"]
+atlas = ExtResource("walk_bow")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="walk_bow_7"]
+atlas = ExtResource("walk_bow")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_0"]
+atlas = ExtResource("jump_bow")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_1"]
+atlas = ExtResource("jump_bow")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_2"]
+atlas = ExtResource("jump_bow")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_3"]
+atlas = ExtResource("jump_bow")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_4"]
+atlas = ExtResource("jump_bow")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_5"]
+atlas = ExtResource("jump_bow")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_6"]
+atlas = ExtResource("jump_bow")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="jump_bow_7"]
+atlas = ExtResource("jump_bow")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_0"]
+atlas = ExtResource("bow_draw")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_1"]
+atlas = ExtResource("bow_draw")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_2"]
+atlas = ExtResource("bow_draw")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_3"]
+atlas = ExtResource("bow_draw")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_4"]
+atlas = ExtResource("bow_draw")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_5"]
+atlas = ExtResource("bow_draw")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_6"]
+atlas = ExtResource("bow_draw")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_7"]
+atlas = ExtResource("bow_draw")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_0"]
+atlas = ExtResource("bow_release")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_1"]
+atlas = ExtResource("bow_release")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_2"]
+atlas = ExtResource("bow_release")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_3"]
+atlas = ExtResource("bow_release")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_4"]
+atlas = ExtResource("bow_release")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_5"]
+atlas = ExtResource("bow_release")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_6"]
+atlas = ExtResource("bow_release")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_7"]
+atlas = ExtResource("bow_release")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_0"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_1"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_2"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_3"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_4"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_5"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_6"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_up_7"]
+atlas = ExtResource("bow_draw_up")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_0"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_1"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_2"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_3"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_4"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_5"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_6"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_up_7"]
+atlas = ExtResource("bow_release_up")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_0"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_1"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_2"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_3"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_4"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_5"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_6"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_draw_down_7"]
+atlas = ExtResource("bow_draw_down")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_0"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(0, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_1"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(512, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_2"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(1024, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_3"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(1536, 0, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_4"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(0, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_5"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(512, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_6"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(1024, 512, 512, 512)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="bow_release_down_7"]
+atlas = ExtResource("bow_release_down")
+region = Rect2(1536, 512, 512, 512)
+filter_clip = true
+
+[resource]
+animations = [{"frames": [{"duration": 4, "texture": SubResource("idle_sword_0")}, {"duration": 2, "texture": SubResource("idle_sword_1")}, {"duration": 2, "texture": SubResource("idle_sword_2")}, {"duration": 2, "texture": SubResource("idle_sword_3")}, {"duration": 0.5, "texture": SubResource("idle_sword_4")}, {"duration": 0.5, "texture": SubResource("idle_sword_5")}, {"duration": 0.5, "texture": SubResource("idle_sword_6")}, {"duration": 2.5, "texture": SubResource("idle_sword_7")}], "loop": true, "name": &"idle_sword", "speed": 6.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("walk_sword_0")}, {"duration": 1.0, "texture": SubResource("walk_sword_1")}, {"duration": 1.0, "texture": SubResource("walk_sword_2")}, {"duration": 1.0, "texture": SubResource("walk_sword_3")}, {"duration": 1.0, "texture": SubResource("walk_sword_4")}, {"duration": 1.0, "texture": SubResource("walk_sword_5")}, {"duration": 1.0, "texture": SubResource("walk_sword_6")}, {"duration": 1.0, "texture": SubResource("walk_sword_7")}], "loop": true, "name": &"walk_sword", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_sword_0")}, {"duration": 1.0, "texture": SubResource("jump_sword_1")}, {"duration": 1.0, "texture": SubResource("jump_sword_2")}, {"duration": 1.0, "texture": SubResource("jump_sword_3")}, {"duration": 1.0, "texture": SubResource("jump_sword_4")}, {"duration": 1.0, "texture": SubResource("jump_sword_5")}, {"duration": 1.0, "texture": SubResource("jump_sword_6")}, {"duration": 1.0, "texture": SubResource("jump_sword_7")}], "loop": false, "name": &"jump_sword", "speed": 10.0},
+{"frames": [{"duration": 1, "texture": SubResource("slash_0")}, {"duration": 1.4, "texture": SubResource("slash_1")}, {"duration": 1.1, "texture": SubResource("slash_2")}, {"duration": 0.65, "texture": SubResource("slash_3")}, {"duration": 0.65, "texture": SubResource("slash_4")}, {"duration": 1.3, "texture": SubResource("slash_5")}, {"duration": 1.3, "texture": SubResource("slash_6")}, {"duration": 1.6, "texture": SubResource("slash_7")}], "loop": false, "name": &"slash", "speed": 16.0},
+{"frames": [{"duration": 4, "texture": SubResource("idle_bow_0")}, {"duration": 2, "texture": SubResource("idle_bow_1")}, {"duration": 2, "texture": SubResource("idle_bow_2")}, {"duration": 2, "texture": SubResource("idle_bow_3")}, {"duration": 0.5, "texture": SubResource("idle_bow_4")}, {"duration": 0.5, "texture": SubResource("idle_bow_5")}, {"duration": 0.5, "texture": SubResource("idle_bow_6")}, {"duration": 2.5, "texture": SubResource("idle_bow_7")}], "loop": true, "name": &"idle_bow", "speed": 6.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("walk_bow_0")}, {"duration": 1.0, "texture": SubResource("walk_bow_1")}, {"duration": 1.0, "texture": SubResource("walk_bow_2")}, {"duration": 1.0, "texture": SubResource("walk_bow_3")}, {"duration": 1.0, "texture": SubResource("walk_bow_4")}, {"duration": 1.0, "texture": SubResource("walk_bow_5")}, {"duration": 1.0, "texture": SubResource("walk_bow_6")}, {"duration": 1.0, "texture": SubResource("walk_bow_7")}], "loop": true, "name": &"walk_bow", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_bow_0")}, {"duration": 1.0, "texture": SubResource("jump_bow_1")}, {"duration": 1.0, "texture": SubResource("jump_bow_2")}, {"duration": 1.0, "texture": SubResource("jump_bow_3")}, {"duration": 1.0, "texture": SubResource("jump_bow_4")}, {"duration": 1.0, "texture": SubResource("jump_bow_5")}, {"duration": 1.0, "texture": SubResource("jump_bow_6")}, {"duration": 1.0, "texture": SubResource("jump_bow_7")}], "loop": false, "name": &"jump_bow", "speed": 10.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("bow_draw_0")}, {"duration": 1.0, "texture": SubResource("bow_draw_1")}, {"duration": 1.0, "texture": SubResource("bow_draw_2")}, {"duration": 1.0, "texture": SubResource("bow_draw_3")}, {"duration": 1.0, "texture": SubResource("bow_draw_4")}, {"duration": 1.0, "texture": SubResource("bow_draw_5")}, {"duration": 1.0, "texture": SubResource("bow_draw_6")}, {"duration": 1.0, "texture": SubResource("bow_draw_7")}], "loop": false, "name": &"bow_draw", "speed": 10.0},
+{"frames": [{"duration": 0.35, "texture": SubResource("bow_draw_7")}, {"duration": 0.65, "texture": SubResource("bow_release_1")}, {"duration": 0.8, "texture": SubResource("bow_release_2")}, {"duration": 1, "texture": SubResource("bow_release_3")}, {"duration": 1.2, "texture": SubResource("bow_release_4")}, {"duration": 1.2, "texture": SubResource("bow_release_5")}, {"duration": 1.2, "texture": SubResource("bow_release_6")}, {"duration": 1.6, "texture": SubResource("bow_release_7")}], "loop": false, "name": &"bow_release", "speed": 16.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("bow_draw_up_0")}, {"duration": 1.0, "texture": SubResource("bow_draw_up_1")}, {"duration": 1.0, "texture": SubResource("bow_draw_up_2")}, {"duration": 1.0, "texture": SubResource("bow_draw_up_3")}, {"duration": 1.0, "texture": SubResource("bow_draw_up_4")}, {"duration": 1.0, "texture": SubResource("bow_draw_up_5")}, {"duration": 1.0, "texture": SubResource("bow_draw_up_6")}, {"duration": 1.0, "texture": SubResource("bow_draw_up_7")}], "loop": false, "name": &"bow_draw_up", "speed": 10.0},
+{"frames": [{"duration": 0.35, "texture": SubResource("bow_draw_up_7")}, {"duration": 0.65, "texture": SubResource("bow_release_up_1")}, {"duration": 0.8, "texture": SubResource("bow_release_up_2")}, {"duration": 1, "texture": SubResource("bow_release_up_3")}, {"duration": 1.2, "texture": SubResource("bow_release_up_4")}, {"duration": 1.2, "texture": SubResource("bow_release_up_5")}, {"duration": 1.2, "texture": SubResource("bow_release_up_6")}, {"duration": 1.6, "texture": SubResource("bow_release_up_7")}], "loop": false, "name": &"bow_release_up", "speed": 16.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("bow_draw_down_0")}, {"duration": 1.0, "texture": SubResource("bow_draw_down_1")}, {"duration": 1.0, "texture": SubResource("bow_draw_down_2")}, {"duration": 1.0, "texture": SubResource("bow_draw_down_3")}, {"duration": 1.0, "texture": SubResource("bow_draw_down_4")}, {"duration": 1.0, "texture": SubResource("bow_draw_down_5")}, {"duration": 1.0, "texture": SubResource("bow_draw_down_6")}, {"duration": 1.0, "texture": SubResource("bow_draw_down_7")}], "loop": false, "name": &"bow_draw_down", "speed": 10.0},
+{"frames": [{"duration": 0.35, "texture": SubResource("bow_draw_down_7")}, {"duration": 0.65, "texture": SubResource("bow_release_down_1")}, {"duration": 0.8, "texture": SubResource("bow_release_down_2")}, {"duration": 1, "texture": SubResource("bow_release_down_3")}, {"duration": 1.2, "texture": SubResource("bow_release_down_4")}, {"duration": 1.2, "texture": SubResource("bow_release_down_5")}, {"duration": 1.2, "texture": SubResource("bow_release_down_6")}, {"duration": 1.6, "texture": SubResource("bow_release_down_7")}], "loop": false, "name": &"bow_release_down", "speed": 16.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_sword_0")}, {"duration": 1.0, "texture": SubResource("jump_sword_1")}, {"duration": 1.0, "texture": SubResource("jump_sword_2")}], "loop": false, "name": &"jump_start_sword", "speed": 24},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_sword_3")}, {"duration": 1.0, "texture": SubResource("jump_sword_4")}, {"duration": 1.0, "texture": SubResource("jump_sword_5")}], "loop": false, "name": &"jump_air_sword", "speed": 8},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_sword_6")}, {"duration": 1.0, "texture": SubResource("jump_sword_7")}], "loop": false, "name": &"jump_land_sword", "speed": 16},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_bow_0")}, {"duration": 1.0, "texture": SubResource("jump_bow_1")}, {"duration": 1.0, "texture": SubResource("jump_bow_2")}], "loop": false, "name": &"jump_start_bow", "speed": 24},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_bow_3")}, {"duration": 1.0, "texture": SubResource("jump_bow_4")}, {"duration": 1.0, "texture": SubResource("jump_bow_5")}], "loop": false, "name": &"jump_air_bow", "speed": 8},
+{"frames": [{"duration": 1.0, "texture": SubResource("jump_bow_6")}, {"duration": 1.0, "texture": SubResource("jump_bow_7")}], "loop": false, "name": &"jump_land_bow", "speed": 16}]

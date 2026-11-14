@@ -24,3 +24,5 @@ function Invoke-GodotCheck([string[]]$ExtraArguments, [string]$LogName, [string]
 Invoke-GodotCheck @('--editor', '--quit') 'import-check.log' ''
 Invoke-GodotCheck @('res://tests/gameplay_test.tscn') 'gameplay-test.log' 'GAMEPLAY_TEST_OK'
 Invoke-GodotCheck @('res://tests/profile_pose_test.tscn') 'profile-pose-test.log' 'PROFILE_POSE_TEST_OK'
+Invoke-GodotCheck @('res://tests/sprite_gameplay_test.tscn') 'sprite-gameplay-test.log' 'SPRITE_GAMEPLAY_TEST_OK'
+Invoke-GodotCheck @('--script', 'res://tests/sprite_navigation_test.gd') 'sprite-navigation-test.log' 'SPRITE_NAVIGATION_TEST_OK'

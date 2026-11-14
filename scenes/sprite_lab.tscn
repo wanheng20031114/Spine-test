@@ -1,0 +1,784 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/sprite_lab.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/sprite_schoolgirl.tscn" id="actor"]
+[ext_resource type="PackedScene" path="res://scenes/target.tscn" id="target"]
+[ext_resource type="PackedScene" path="res://scenes/arrow.tscn" id="arrow"]
+[ext_resource type="Font" path="res://assets/ui_font.tres" id="font"]
+[ext_resource type="SpriteFrames" path="res://assets/schoolgirl_frames/schoolgirl_frames.tres" id="frames"]
+[ext_resource type="Texture2D" path="res://assets/schoolgirl_frames/idle_sword.png" id="sheet"]
+[sub_resource type="RectangleShape2D" id="floor"]
+size = Vector2(1110, 36)
+[sub_resource type="StyleBoxFlat" id="button"]
+bg_color = Color(0.10, 0.18, 0.23, 1)
+border_width_left = 1
+border_width_right = 1
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.27, 0.42, 0.48, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_left = 4
+corner_radius_bottom_right = 4
+[sub_resource type="StyleBoxFlat" id="hover"]
+bg_color = Color(0.16, 0.31, 0.34, 1)
+[node name="SpriteLab" type="Node2D"]
+script = ExtResource("script")
+
+[node name="World" type="Node2D" parent="."]
+
+
+[node name="Background" type="ColorRect" parent="World"]
+offset_left = 0
+offset_top = 0
+offset_right = 1440
+offset_bottom = 900
+color = Color(0.027, 0.043, 0.059, 1)
+mouse_filter = 2
+
+[node name="Arena" type="ColorRect" parent="World"]
+offset_left = 24
+offset_top = 150
+offset_right = 1110
+offset_bottom = 718
+color = Color(0.045, 0.075, 0.096, 1)
+mouse_filter = 2
+
+[node name="Grid0" type="Line2D" parent="World"]
+points = PackedVector2Array(62, 150, 62, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid1" type="Line2D" parent="World"]
+points = PackedVector2Array(126, 150, 126, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid2" type="Line2D" parent="World"]
+points = PackedVector2Array(190, 150, 190, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid3" type="Line2D" parent="World"]
+points = PackedVector2Array(254, 150, 254, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid4" type="Line2D" parent="World"]
+points = PackedVector2Array(318, 150, 318, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid5" type="Line2D" parent="World"]
+points = PackedVector2Array(382, 150, 382, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid6" type="Line2D" parent="World"]
+points = PackedVector2Array(446, 150, 446, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid7" type="Line2D" parent="World"]
+points = PackedVector2Array(510, 150, 510, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid8" type="Line2D" parent="World"]
+points = PackedVector2Array(574, 150, 574, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid9" type="Line2D" parent="World"]
+points = PackedVector2Array(638, 150, 638, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid10" type="Line2D" parent="World"]
+points = PackedVector2Array(702, 150, 702, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid11" type="Line2D" parent="World"]
+points = PackedVector2Array(766, 150, 766, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid12" type="Line2D" parent="World"]
+points = PackedVector2Array(830, 150, 830, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid13" type="Line2D" parent="World"]
+points = PackedVector2Array(894, 150, 894, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid14" type="Line2D" parent="World"]
+points = PackedVector2Array(958, 150, 958, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="Grid15" type="Line2D" parent="World"]
+points = PackedVector2Array(1022, 150, 1022, 718)
+width = 1
+default_color = Color(0.15, 0.25, 0.29, 0.25)
+
+[node name="GroundLine" type="Line2D" parent="World"]
+points = PackedVector2Array(24, 658, 1110, 658)
+width = 2
+default_color = Color(0.43, 0.83, 0.78, 1)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(567, 676)
+collision_layer = 1
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("floor")
+
+[node name="Actor" parent="." instance=ExtResource("actor")]
+position = Vector2(410, 658)
+
+[node name="TargetLeft" parent="." instance=ExtResource("target")]
+position = Vector2(160, 658)
+scale = Vector2(1, 1)
+
+[node name="TargetNear" parent="." instance=ExtResource("target")]
+position = Vector2(850, 658)
+scale = Vector2(1, 1)
+
+[node name="TargetHigh" parent="." instance=ExtResource("target")]
+position = Vector2(945, 320)
+scale = Vector2(0.7, 0.7)
+
+[node name="TargetLow" parent="." instance=ExtResource("target")]
+position = Vector2(610, 693)
+scale = Vector2(0.55, 0.55)
+
+[node name="Arrows" type="Node2D" parent="."]
+
+
+[node name="Arrow01" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow02" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow03" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow04" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow05" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow06" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow07" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow08" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow09" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow10" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow11" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="Arrow12" parent="Arrows" instance=ExtResource("arrow")]
+
+[node name="AimGuide" type="Line2D" parent="."]
+points = PackedVector2Array(145, 0, 175, 0, 166, -5, 175, 0, 166, 5)
+width = 1.5
+default_color = Color(0.9, 0.73, 0.40, 0.8)
+z_index = 20
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+
+[node name="Kicker" type="Label" parent="HUD"]
+offset_left = 32
+offset_top = 22
+offset_right = 732
+offset_bottom = 47
+text = "AI SPRITES  /  ANIMATION STUDY"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.48, 0.86, 0.80, 1)
+
+[node name="Title" type="Label" parent="HUD"]
+offset_left = 30
+offset_top = 52
+offset_right = 980
+offset_bottom = 107
+text = "SPRITE / MOTION LAB"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(0.85, 0.94, 0.94, 1)
+
+[node name="Subtitle" type="Label" parent="HUD"]
+offset_left = 33
+offset_top = 116
+offset_right = 883
+offset_bottom = 146
+text = "黑长直少女 · 逐帧动画试验场"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Skeleton" type="Button" parent="HUD"]
+offset_left = 1160
+offset_top = 80
+offset_right = 1395
+offset_bottom = 126
+text = "骨骼版  / F3"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("hover")
+
+[node name="StageLabel" type="Label" parent="HUD"]
+offset_left = 48
+offset_top = 172
+offset_right = 728
+offset_bottom = 202
+text = "01 / 移动、跳跃与三档射箭"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 19
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="StageHint" type="Label" parent="HUD"]
+offset_left = 48
+offset_top = 213
+offset_right = 928
+offset_bottom = 241
+text = "鼠标位置选择 上 / 中 / 下；左右自动镜像"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.40, 0.60, 0.66, 1)
+
+[node name="Side" type="ColorRect" parent="HUD"]
+offset_left = 1134
+offset_top = 150
+offset_right = 1408
+offset_bottom = 718
+color = Color(0.064, 0.103, 0.126, 1)
+mouse_filter = 2
+
+[node name="Accent" type="ColorRect" parent="HUD"]
+offset_left = 1134
+offset_top = 150
+offset_right = 1137
+offset_bottom = 202
+color = Color(0.48, 0.9, 0.80, 1)
+mouse_filter = 2
+
+[node name="SideTitle" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 173
+offset_right = 1378
+offset_bottom = 205
+text = "角色状态"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Weapon" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 228
+offset_right = 1388
+offset_bottom = 263
+text = "01 / 直剑"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0.56, 0.95, 0.86, 1)
+
+[node name="State" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 280
+offset_right = 1388
+offset_bottom = 307
+text = "待机"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Aim" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 324
+offset_right = 1388
+offset_bottom = 351
+text = "瞄准 / 平"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Animation" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 372
+offset_right = 1388
+offset_bottom = 427
+text = "idle_sword"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.46, 0.68, 0.73, 1)
+
+[node name="Charge" type="ProgressBar" parent="HUD"]
+offset_left = 1158
+offset_top = 452
+offset_right = 1384
+offset_bottom = 462
+show_percentage = false
+mouse_filter = 2
+
+[node name="Stats" type="Label" parent="HUD"]
+offset_left = 1158
+offset_top = 487
+offset_right = 1388
+offset_bottom = 575
+text = ""
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Inspect" type="Button" parent="HUD"]
+offset_left = 1158
+offset_top = 601
+offset_right = 1384
+offset_bottom = 643
+text = "逐帧查看 TAB"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("hover")
+
+[node name="Reset" type="Button" parent="HUD"]
+offset_left = 1158
+offset_top = 654
+offset_right = 1384
+offset_bottom = 694
+text = "重置  R"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("hover")
+
+[node name="Hint" type="Label" parent="HUD"]
+offset_left = 48
+offset_top = 737
+offset_right = 1368
+offset_bottom = 767
+text = "落地后左键攻击 · Q 切换武器 · 按住拉弓，松开放箭"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 19
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="KeyCard0" type="ColorRect" parent="HUD"]
+offset_left = 24
+offset_top = 790
+offset_right = 246
+offset_bottom = 862
+color = Color(0.07, 0.115, 0.14, 1)
+mouse_filter = 2
+
+[node name="Key0" type="Label" parent="HUD"]
+offset_left = 42
+offset_top = 800
+offset_right = 236
+offset_bottom = 828
+text = "A / D"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.61, 0.93, 0.87, 1)
+
+[node name="Caption0" type="Label" parent="HUD"]
+offset_left = 42
+offset_top = 834
+offset_right = 236
+offset_bottom = 858
+text = "横向移动"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.45, 0.66, 0.72, 1)
+
+[node name="KeyCard1" type="ColorRect" parent="HUD"]
+offset_left = 258
+offset_top = 790
+offset_right = 480
+offset_bottom = 862
+color = Color(0.07, 0.115, 0.14, 1)
+mouse_filter = 2
+
+[node name="Key1" type="Label" parent="HUD"]
+offset_left = 276
+offset_top = 800
+offset_right = 470
+offset_bottom = 828
+text = "SPACE"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.61, 0.93, 0.87, 1)
+
+[node name="Caption1" type="Label" parent="HUD"]
+offset_left = 276
+offset_top = 834
+offset_right = 470
+offset_bottom = 858
+text = "跳跃 / 落地缓冲"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.45, 0.66, 0.72, 1)
+
+[node name="KeyCard2" type="ColorRect" parent="HUD"]
+offset_left = 492
+offset_top = 790
+offset_right = 714
+offset_bottom = 862
+color = Color(0.07, 0.115, 0.14, 1)
+mouse_filter = 2
+
+[node name="Key2" type="Label" parent="HUD"]
+offset_left = 510
+offset_top = 800
+offset_right = 704
+offset_bottom = 828
+text = "鼠标"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.61, 0.93, 0.87, 1)
+
+[node name="Caption2" type="Label" parent="HUD"]
+offset_left = 510
+offset_top = 834
+offset_right = 704
+offset_bottom = 858
+text = "朝向 / 三档瞄准"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.45, 0.66, 0.72, 1)
+
+[node name="KeyCard3" type="ColorRect" parent="HUD"]
+offset_left = 726
+offset_top = 790
+offset_right = 948
+offset_bottom = 862
+color = Color(0.07, 0.115, 0.14, 1)
+mouse_filter = 2
+
+[node name="Key3" type="Label" parent="HUD"]
+offset_left = 744
+offset_top = 800
+offset_right = 938
+offset_bottom = 828
+text = "左键"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.61, 0.93, 0.87, 1)
+
+[node name="Caption3" type="Label" parent="HUD"]
+offset_left = 744
+offset_top = 834
+offset_right = 938
+offset_bottom = 858
+text = "挥剑 / 拉弓放箭"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.45, 0.66, 0.72, 1)
+
+[node name="KeyCard4" type="ColorRect" parent="HUD"]
+offset_left = 960
+offset_top = 790
+offset_right = 1182
+offset_bottom = 862
+color = Color(0.07, 0.115, 0.14, 1)
+mouse_filter = 2
+
+[node name="Key4" type="Label" parent="HUD"]
+offset_left = 978
+offset_top = 800
+offset_right = 1172
+offset_bottom = 828
+text = "Q"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.61, 0.93, 0.87, 1)
+
+[node name="Caption4" type="Label" parent="HUD"]
+offset_left = 978
+offset_top = 834
+offset_right = 1172
+offset_bottom = 858
+text = "切换剑与弓"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.45, 0.66, 0.72, 1)
+
+[node name="KeyCard5" type="ColorRect" parent="HUD"]
+offset_left = 1194
+offset_top = 790
+offset_right = 1416
+offset_bottom = 862
+color = Color(0.07, 0.115, 0.14, 1)
+mouse_filter = 2
+
+[node name="Key5" type="Label" parent="HUD"]
+offset_left = 1212
+offset_top = 800
+offset_right = 1406
+offset_bottom = 828
+text = "TAB"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.61, 0.93, 0.87, 1)
+
+[node name="Caption5" type="Label" parent="HUD"]
+offset_left = 1212
+offset_top = 834
+offset_right = 1406
+offset_bottom = 858
+text = "检查所有动作"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.45, 0.66, 0.72, 1)
+
+[node name="Footer" type="Label" parent="HUD"]
+offset_left = 32
+offset_top = 874
+offset_right = 1382
+offset_bottom = 897
+text = "13 组动作 · 104 张原始帧 · 同角色 / 严格侧面 / 左右镜像"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.36, 0.57, 0.65, 1)
+
+[node name="Inspector" type="Control" parent="HUD"]
+visible = false
+offset_right = 1440
+offset_bottom = 900
+mouse_filter = 0
+
+[node name="Shade" type="ColorRect" parent="HUD/Inspector"]
+offset_left = 0
+offset_top = 0
+offset_right = 1440
+offset_bottom = 900
+color = Color(0.025, 0.041, 0.057, 1)
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="HUD/Inspector"]
+offset_left = 45
+offset_top = 28
+offset_right = 1045
+offset_bottom = 84
+text = "FRAME STUDY / 逐帧检查"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Hint" type="Label" parent="HUD/Inspector"]
+offset_left = 48
+offset_top = 92
+offset_right = 1148
+offset_bottom = 120
+text = "选择动作、暂停或拖动帧序号；TAB 返回操作"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Selector" type="OptionButton" parent="HUD/Inspector"]
+offset_left = 48
+offset_top = 146
+offset_right = 470
+offset_bottom = 191
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 19
+item_count = 13
+selected = 0
+popup/item_0/text = "01 持剑待机"
+popup/item_0/id = 0
+popup/item_1/text = "02 持剑行走"
+popup/item_1/id = 1
+popup/item_2/text = "03 持剑跳跃"
+popup/item_2/id = 2
+popup/item_3/text = "04 挥剑"
+popup/item_3/id = 3
+popup/item_4/text = "05 持弓待机"
+popup/item_4/id = 4
+popup/item_5/text = "06 持弓行走"
+popup/item_5/id = 5
+popup/item_6/text = "07 持弓跳跃"
+popup/item_6/id = 6
+popup/item_7/text = "08 平射拉弓"
+popup/item_7/id = 7
+popup/item_8/text = "09 平射释放"
+popup/item_8/id = 8
+popup/item_9/text = "10 上射拉弓"
+popup/item_9/id = 9
+popup/item_10/text = "11 上射释放"
+popup/item_10/id = 10
+popup/item_11/text = "12 下射拉弓"
+popup/item_11/id = 11
+popup/item_12/text = "13 下射释放"
+popup/item_12/id = 12
+
+[node name="PreviewBackground" type="ColorRect" parent="HUD/Inspector"]
+offset_left = 48
+offset_top = 214
+offset_right = 470
+offset_bottom = 692
+color = Color(0.085, 0.13, 0.16, 1)
+mouse_filter = 2
+
+[node name="Preview" type="AnimatedSprite2D" parent="HUD/Inspector"]
+position = Vector2(235, 651)
+scale = Vector2(0.95, 0.95)
+sprite_frames = ExtResource("frames")
+animation = &"idle_sword"
+offset = Vector2(0, -208)
+
+[node name="Baseline" type="Line2D" parent="HUD/Inspector"]
+points = PackedVector2Array(64, 651, 452, 651)
+width = 1
+default_color = Color(0.4, 0.75, 0.7, 0.7)
+
+[node name="SheetTitle" type="Label" parent="HUD/Inspector"]
+offset_left = 525
+offset_top = 150
+offset_right = 1325
+offset_bottom = 190
+text = "对齐后的透明精灵图 / 4 × 2"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="SheetBackground" type="ColorRect" parent="HUD/Inspector"]
+offset_left = 516
+offset_top = 214
+offset_right = 1392
+offset_bottom = 652
+color = Color(0.12, 0.17, 0.20, 1)
+mouse_filter = 2
+
+[node name="Sheet" type="TextureRect" parent="HUD/Inspector"]
+offset_left = 516
+offset_top = 214
+offset_right = 1392
+offset_bottom = 652
+texture = ExtResource("sheet")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="FrameLabel" type="Label" parent="HUD/Inspector"]
+offset_left = 525
+offset_top = 680
+offset_right = 1325
+offset_bottom = 720
+text = "FRAME 01 / 08"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[node name="Timeline" type="HSlider" parent="HUD/Inspector"]
+offset_left = 525
+offset_top = 739
+offset_right = 1370
+offset_bottom = 772
+max_value = 7
+step = 1
+
+[node name="Play" type="Button" parent="HUD/Inspector"]
+offset_left = 48
+offset_top = 723
+offset_right = 174
+offset_bottom = 767
+text = "暂停"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("hover")
+
+[node name="Step" type="Button" parent="HUD/Inspector"]
+offset_left = 187
+offset_top = 723
+offset_right = 313
+offset_bottom = 767
+text = "下一帧"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("hover")
+
+[node name="Mirror" type="Button" parent="HUD/Inspector"]
+offset_left = 326
+offset_top = 723
+offset_right = 470
+offset_bottom = 767
+text = "左右镜像"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("hover")
+
+[node name="Close" type="Button" parent="HUD/Inspector"]
+offset_left = 48
+offset_top = 800
+offset_right = 470
+offset_bottom = 846
+text = "返回操作 / TAB"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("hover")
+
+[node name="Footer" type="Label" parent="HUD/Inspector"]
+offset_left = 525
+offset_top = 813
+offset_right = 1385
+offset_bottom = 848
+text = "每帧保留生图原始 RGBA；统一脚底与画布，仅做裁切、对齐和无损打包。"
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.74, 0.86, 0.87, 1)
+
+[connection signal="pressed" from="HUD/Skeleton" to="." method="_open_skeleton"]
+[connection signal="pressed" from="HUD/Inspect" to="." method="_toggle_inspector"]
+[connection signal="pressed" from="HUD/Reset" to="." method="_reset_lab"]
+[connection signal="pressed" from="HUD/Inspector/Close" to="." method="_toggle_inspector"]
+[connection signal="item_selected" from="HUD/Inspector/Selector" to="." method="_select_animation"]
+[connection signal="pressed" from="HUD/Inspector/Play" to="." method="_toggle_preview"]
+[connection signal="pressed" from="HUD/Inspector/Step" to="." method="_step"]
+[connection signal="pressed" from="HUD/Inspector/Mirror" to="." method="_mirror_preview"]
+[connection signal="value_changed" from="HUD/Inspector/Timeline" to="." method="_scrub"]

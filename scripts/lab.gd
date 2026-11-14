@@ -26,7 +26,9 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("reset_lab"):
+	if event.is_action_pressed("switch_animation_lab"):
+		_open_sprite_lab()
+	elif event.is_action_pressed("reset_lab"):
 		_reset_lab()
 	elif event.is_action_pressed("toggle_parts"):
 		_toggle_parts()
@@ -111,3 +113,8 @@ func _update_character_ui() -> void:
 	$HUD/AtlasPanel/ProfileParts.visible = character_index == 1
 	$HUD/AtlasPanel/AtlasTitle.text = operator.display_name + "  /  PARTS"
 	$HUD/AtlasPanel/AtlasLegend.text = operator.parts_legend
+
+
+func _open_sprite_lab() -> void:
+	operator._cancel_action()
+	get_tree().change_scene_to_file("res://scenes/sprite_lab.tscn")

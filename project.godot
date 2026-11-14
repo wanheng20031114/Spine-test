@@ -26,6 +26,15 @@ window/stretch/mode="canvas_items"
 
 [input]
 
+jump={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":32)]
+}
+switch_animation_lab={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":4194334)]
+}
+
 move_left={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"physical_keycode":65)]

@@ -1106,3 +1106,16 @@ offset_bottom = 799.0
 [connection signal="pressed" from="HUD/ResetButton" to="." method="_reset_lab"]
 
 [connection signal="pressed" from="HUD/CharacterButton" to="." method="_switch_character"]
+
+[node name="SpriteLabButton" type="Button" parent="HUD"]
+offset_left = 1170.0
+offset_top = 95.0
+offset_right = 1408.0
+offset_bottom = 133.0
+text = "逐帧动画试验场  / F3"
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("button")
+theme_override_styles/hover = SubResource("button_hover")
+
+[connection signal="pressed" from="HUD/SpriteLabButton" to="." method="_open_sprite_lab"]

@@ -1,0 +1,46 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/sprite_operator.gd" id="script"]
+[ext_resource type="SpriteFrames" path="res://assets/schoolgirl_frames/schoolgirl_frames.tres" id="frames"]
+
+[sub_resource type="CapsuleShape2D" id="body"]
+radius = 19.0
+height = 145.0
+[sub_resource type="CircleShape2D" id="attack"]
+radius = 48.0
+
+[node name="SpriteSchoolgirl" type="CharacterBody2D"]
+script = ExtResource("script")
+collision_layer = 2
+collision_mask = 1
+floor_snap_length = 8.0
+z_index = 10
+
+[node name="Body" type="CollisionShape2D" parent="."]
+position = Vector2(0, -72.5)
+shape = SubResource("body")
+
+[node name="Visual" type="Node2D" parent="."]
+scale = Vector2(0.6, 0.6)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual"]
+sprite_frames = ExtResource("frames")
+animation = &"idle_sword"
+autoplay = "idle_sword"
+offset = Vector2(0, -208)
+
+[node name="Muzzle" type="Marker2D" parent="Visual"]
+position = Vector2(-45, -246)
+
+[node name="MeleePivot" type="Node2D" parent="."]
+position = Vector2(0, -116)
+[node name="Hitbox" type="Area2D" parent="MeleePivot"]
+position = Vector2(86, 0)
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+[node name="Shape" type="CollisionShape2D" parent="MeleePivot/Hitbox"]
+shape = SubResource("attack")
+
+[connection signal="frame_changed" from="Visual/AnimatedSprite2D" to="." method="_on_frame_changed"]
+[connection signal="animation_finished" from="Visual/AnimatedSprite2D" to="." method="_on_animation_finished"]
