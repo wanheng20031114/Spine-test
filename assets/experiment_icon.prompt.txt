@@ -1,9 +1,27 @@
-Generator: Built-in image_gen
-Selected output: exec-4701d9a5-428a-4e5b-8211-82001850c7b3.png
-Original generated RGBA preserved without pixel editing.
+Concept generator: Built-in image_gen
+Selected concept: exec-6ef4a44e-8348-4ee9-9647-7ebdc2c208d4.png
+Unmodified generated reference: docs/experiment_icon.reference.png
+Final asset: assets/experiment_icon.svg (user-authorized editable vector reconstruction)
+Matching PNG: assets/experiment_icon.png (1024px export using Godot's SVG renderer)
 
+PRODUCTION SPECIFICATION
+Primary: #00BFFF. Background: #FFFFFF. Upper faces: #99E5FF (60% white tint). Side faces: #0099CC (80% primary).
+One open three-dimensional test rig, one test cube, a controller base and an integrated upper DBR nameplate.
+Original upright rounded DBR path lettering, 96-unit cap height, uniform 16-unit stroke, round terminals and joins. No external font dependency.
+Small-size checks: 32, 64, 128 and 512px using Godot Image.load_svg_from_string.
+Godot SVG text guidance: https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_images.html#importing-svg-images-with-text
+
+CONCEPT PROMPT
 Use case: logo-brand.
-Asset type: one finished square app/project icon for a 2D animation experiment laboratory, designed to read clearly at 64 x 64 pixels.
-Create a single bold geometric pictogram, no text or letters. A deep ink-navy rounded square badge fills about 90 percent of the canvas. Inside, combine a simple cyan/seafoam Erlenmeyer laboratory flask silhouette with three circular keyframe nodes connected by a short rising motion path. The flask communicates experiment; the linked geometric nodes communicate animation and iterative testing. Include one small amber diamond as a restrained accent, integrated with the motion path. Cohesive single emblem, not a collage of separate icons.
-Visual language: precise flat vector-like geometry, strong negative space, balanced composition, broad clean strokes, rounded joins, limited palette of dark navy, pale seafoam, vivid teal and a small amber accent. Flask is large and instantly readable, central and slightly below center; its lower chamber contains two simple geometric liquid shapes. No tiny measurement ticks or fine details. Crisp hard edges with antialiasing. Modern experimental design-studio identity, elegant and friendly.
-No characters, faces, words, lettering, numbers, logos, watermark, 3D rendering, gradients, glow, drop shadows, mockup scene, multiple options or decorative clutter. Perfect square composition. Native transparent alpha outside the rounded-square badge; badge itself and emblem are opaque.
+Asset type: a new square studio/project icon for DBR, representing GAME TECHNOLOGY EXPERIMENTS.
+Complete redesign. The user dislikes a flask, flat chemistry symbols, squat lettering, and a detached DBR subtitle. Do not include a flask or chemistry apparatus.
+
+Primary composition: a compact three-dimensional OPEN TEST RIG / cubic scaffolding frame, with one large geometric cube suspended inside it over a testing platform. Think of a small friendly game-engine physics laboratory, a voxel or collision test inside a modular frame. The rig and cube are the dominant subject. Thick structural beams, substantial cube, clear empty space. A very simple game-controller cue is integrated into the front of the lower base: a D-pad cross and two round buttons. Those are part of the apparatus, not a separate icon floating beside it. The frame, cube and testing base must read as one coherent object.
+
+View and depth: slightly elevated THREE-QUARTER ORTHOGRAPHIC view with the main front of the apparatus nearly facing the viewer, vertical edges truly vertical. Visible top and right faces create dimensionality through simple solid geometric planes. No dramatic perspective. Minimal vector-friendly pseudo-3D, clean industrial design, not a realistic 3D scene. No gradients or surface texture. Use a small number of geometric forms and bold silhouettes, enough depth without clutter. Keep the cube visibly separated from the beams.
+
+Integrate the exact studio name "DBR" into a clearly visible, front-facing rectangular NAMEPLATE on the rig's UPPER FRONT CROSSBEAM. Do not put DBR underneath the whole illustration. The nameplate must be a functional part of the structure. White nameplate area with cyan letters. Typeface direction: upright rounded humanist sans-serif inspired by airport and Japanese railway wayfinding, medium weight, controlled strokes, normal tall capital proportions, open counters, modest corner rounding and balanced tracking. D, B and R must not be squashed, stretched, cartoonish, heavy or compressed. Keep the nameplate nearly frontal so text remains upright and naturally proportioned. Text only "DBR", no other lettering.
+
+Color: white background. Exact primary cyan DeepSkyBlue #00BFFF for the main faces and letters, light cyan tints for upper planes, a darker shade of the same cyan for right-facing planes and depth. Cohesive white and cyan palette only. No unrelated accent colors, no black, no deep navy. Crisp edges.
+Scale: the entire unified rig fills around 88-92 percent of the square canvas, with balanced narrow margins. At 64-128px the frame, cube, game-control symbols and DBR should remain identifiable. Avoid small technical details, fine lines, floating nodes, orbit paths, diagrams, tiny screws, measurement marks or disconnected decorative shapes.
+Deliver one polished, balanced finished square app icon on opaque white. No presentation mockup or multiple alternatives.

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>DBR 游戏技术实验室</title>
+  <desc>白底、DeepSkyBlue 主色的立体测试架。内部方块表示游戏技术试验，底座为游戏控制台。DBR 使用端正的圆角路径字形。</desc>
+  <rect width="1024" height="1024" fill="#FFFFFF"/>
+
+  <!-- Rear structure; all depth faces are flat tints of the primary cyan. -->
+  <g fill="#00BFFF">
+    <rect x="208" y="116" width="48" height="600"/>
+    <rect x="912" y="116" width="48" height="600"/>
+    <rect x="256" y="88" width="656" height="40"/>
+  </g>
+  <g fill="#0099CC">
+    <path d="M256 116 276 99V696L256 716Z"/>
+    <path d="M960 116 976 102V702L960 716Z"/>
+  </g>
+  <path d="M256 88 288 60H944L912 88Z" fill="#99E5FF"/>
+
+  <!-- Controller-shaped test bench. -->
+  <path d="M64 808 176 712H960L848 808Z" fill="#99E5FF"/>
+  <path d="M848 808 960 712V888Q960 900 950 909L848 992Z" fill="#0099CC"/>
+  <path d="M80 808H832Q848 808 848 824V976Q848 992 832 992H80Q64 992 64 976V824Q64 808 80 808Z" fill="#00BFFF"/>
+
+  <!-- Raised platform below the suspended test cube. -->
+  <path d="M264 752 352 680H756L668 752Z" fill="#99E5FF"/>
+  <path d="M668 752 756 680V708L668 780Z" fill="#0099CC"/>
+  <path d="M264 752H668V780H264Z" fill="#00BFFF"/>
+
+  <!-- Open front pillars. -->
+  <g fill="#00BFFF">
+    <rect x="96" y="292" width="64" height="516" rx="6"/>
+    <rect x="784" y="292" width="64" height="516" rx="6"/>
+  </g>
+  <g fill="#0099CC">
+    <path d="M160 292 184 272V788L160 808Z"/>
+    <path d="M848 292 872 272V788L848 808Z"/>
+  </g>
+
+  <!-- The single test cube, kept clear of the surrounding structure. -->
+  <path d="M328 432 424 352H680L584 432Z" fill="#99E5FF"/>
+  <path d="M584 432 680 352V608L584 688Z" fill="#0099CC"/>
+  <path d="M328 432H584V688H328Z" fill="#00BFFF"/>
+
+  <!-- Front crossbeam and side rails form one housing for the studio name. -->
+  <path d="M160 160 192 132H816L784 160Z" fill="#99E5FF"/>
+  <rect x="128" y="160" width="688" height="150" rx="10" fill="#00BFFF"/>
+  <path d="M96 160 208 64H272L160 160Z" fill="#99E5FF"/>
+  <path d="M160 160 272 64V214L160 310Z" fill="#0099CC"/>
+  <rect x="96" y="160" width="64" height="150" rx="7" fill="#00BFFF"/>
+  <path d="M784 160 896 64H960L848 160Z" fill="#99E5FF"/>
+  <path d="M848 160 960 64V214L848 310Z" fill="#0099CC"/>
+  <rect x="784" y="160" width="64" height="150" rx="7" fill="#00BFFF"/>
+  <rect x="266" y="168" width="412" height="134" rx="18" fill="#FFFFFF"/>
+
+  <!-- Custom upright rounded signage capitals: no installed font required. -->
+  <g fill="none" stroke="#00BFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(-6 -7)">
+    <path d="M336 194V290H359C389 290 408 272 408 242S389 194 359 194Z"/>
+    <path d="M448 290V194H477C497 194 508 202 508 218S497 242 477 242H448M477 242H480C501 242 513 250 513 266S501 290 480 290H448"/>
+    <path d="M554 290V194H583C604 194 617 203 617 219S604 244 583 244H554M583 244 620 290"/>
+  </g>
+
+  <!-- Familiar game controls make the experiment's domain explicit. -->
+  <rect x="116" y="834" width="680" height="132" rx="28" fill="#FFFFFF"/>
+  <path d="M270 850H306Q314 850 314 858V882H338Q346 882 346 890V914Q346 922 338 922H314V946Q314 954 306 954H270Q262 954 262 946V922H238Q230 922 230 914V890Q230 882 238 882H262V858Q262 850 270 850Z" fill="#00BFFF"/>
+  <circle cx="558" cy="900" r="34" fill="#00BFFF"/>
+  <circle cx="666" cy="900" r="34" fill="#00BFFF"/>
+</svg>
