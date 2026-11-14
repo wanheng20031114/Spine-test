@@ -14,7 +14,7 @@ config/name="Spine-test"
 config/description="AI 生成分层角色素材与 Godot 原生 2D 骨骼动画测试。"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://assets/operator/head.png"
+config/icon="res://assets/experiment_icon.png"
 
 [display]
 

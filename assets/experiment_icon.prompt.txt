@@ -1,0 +1,9 @@
+Generator: Built-in image_gen
+Selected output: exec-4701d9a5-428a-4e5b-8211-82001850c7b3.png
+Original generated RGBA preserved without pixel editing.
+
+Use case: logo-brand.
+Asset type: one finished square app/project icon for a 2D animation experiment laboratory, designed to read clearly at 64 x 64 pixels.
+Create a single bold geometric pictogram, no text or letters. A deep ink-navy rounded square badge fills about 90 percent of the canvas. Inside, combine a simple cyan/seafoam Erlenmeyer laboratory flask silhouette with three circular keyframe nodes connected by a short rising motion path. The flask communicates experiment; the linked geometric nodes communicate animation and iterative testing. Include one small amber diamond as a restrained accent, integrated with the motion path. Cohesive single emblem, not a collage of separate icons.
+Visual language: precise flat vector-like geometry, strong negative space, balanced composition, broad clean strokes, rounded joins, limited palette of dark navy, pale seafoam, vivid teal and a small amber accent. Flask is large and instantly readable, central and slightly below center; its lower chamber contains two simple geometric liquid shapes. No tiny measurement ticks or fine details. Crisp hard edges with antialiasing. Modern experimental design-studio identity, elegant and friendly.
+No characters, faces, words, lettering, numbers, logos, watermark, 3D rendering, gradients, glow, drop shadows, mockup scene, multiple options or decorative clutter. Perfect square composition. Native transparent alpha outside the rounded-square badge; badge itself and emblem are opaque.
