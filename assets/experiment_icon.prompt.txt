@@ -1,27 +1,24 @@
 Concept generator: Built-in image_gen
-Selected concept: exec-6ef4a44e-8348-4ee9-9647-7ebdc2c208d4.png
-Unmodified generated reference: docs/experiment_icon.reference.png
+Selected concept: exec-a773d624-0b65-4ef6-a406-7a500a2015d3.png
+Style reference: the user-provided studioDaBuRyu icon; used for compactness, bold geometric strokes and clear negative space.
+Unmodified generated concept: docs/experiment_icon.reference.png
 Final asset: assets/experiment_icon.svg (user-authorized editable vector reconstruction)
 Matching PNG: assets/experiment_icon.png (1024px export using Godot's SVG renderer)
 
 PRODUCTION SPECIFICATION
-Primary: #00BFFF. Background: #FFFFFF. Upper faces: #99E5FF (60% white tint). Side faces: #0099CC (80% primary).
-One open three-dimensional test rig, one test cube, a controller base and an integrated upper DBR nameplate.
-Original upright rounded DBR path lettering, 96-unit cap height, uniform 16-unit stroke, round terminals and joins. No external font dependency.
-Small-size checks: 32, 64, 128 and 512px using Godot Image.load_svg_from_string.
-Godot SVG text guidance: https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_images.html#importing-svg-images-with-text
+Only two flat colors: primary #00BFFF and background #FFFFFF. Antialiasing at boundaries only.
+Eight paths: two mirrored open contours, three cube planes and three DBR letter paths. Depth comes from white seams, without extra shades or detailed machinery.
+DBR remains inside the compact emblem, using original upright rounded signage letterforms: 160-unit cap height, 28-unit stroke and open counters. No external font dependency.
+Validated at 32, 64, 128 and 512px using Godot Image.load_svg_from_string.
 
 CONCEPT PROMPT
 Use case: logo-brand.
-Asset type: a new square studio/project icon for DBR, representing GAME TECHNOLOGY EXPERIMENTS.
-Complete redesign. The user dislikes a flask, flat chemistry symbols, squat lettering, and a detached DBR subtitle. Do not include a flask or chemistry apparatus.
+Asset type: one minimal square app icon for DBR studio's experimental game-technology projects.
+Input image 1 is a STYLE REFERENCE: the small studioDaBuRyu logo supplied by the user. Learn from its compact emblem, very few bold angular strokes, strong negative space, quiet professional identity and excellent tiny-size readability. Do not reproduce that emblem literally.
 
-Primary composition: a compact three-dimensional OPEN TEST RIG / cubic scaffolding frame, with one large geometric cube suspended inside it over a testing platform. Think of a small friendly game-engine physics laboratory, a voxel or collision test inside a modular frame. The rig and cube are the dominant subject. Thick structural beams, substantial cube, clear empty space. A very simple game-controller cue is integrated into the front of the lower base: a D-pad cross and two round buttons. Those are part of the apparatus, not a separate icon floating beside it. The frame, cube and testing base must read as one coherent object.
+Design a much simpler ORIGINAL DBR experimental-project mark. One compact logo, not a miniature illustration. Use ONLY two substantial angular bracket-like contours suggesting an OPEN CUBIC FRAME, one simple cubic module inside the upper center, and the clearly legible letters "DBR" integrated into the lower-middle of the mark. The two contours should be visually balanced but can have subtle intentional offsets to imply a modular prototype being assembled. The open frame and cubic module communicate a test space for game technology. Each contour should be a short, confident sequence of straight segments with softly finished corners. Maximum two bracket contours and one module. Keep generous white gaps between all elements. No cage details, rear pillars, base, shelves, controller buttons, machinery, laboratory glassware, arrows, orbit paths or other pictograms.
 
-View and depth: slightly elevated THREE-QUARTER ORTHOGRAPHIC view with the main front of the apparatus nearly facing the viewer, vertical edges truly vertical. Visible top and right faces create dimensionality through simple solid geometric planes. No dramatic perspective. Minimal vector-friendly pseudo-3D, clean industrial design, not a realistic 3D scene. No gradients or surface texture. Use a small number of geometric forms and bold silhouettes, enough depth without clutter. Keep the cube visibly separated from the beams.
+DBR is REQUIRED. Exact text "DBR". Make it part of the central compact emblem, not a detached caption, not a label pasted on a machine. Upright rounded signage sans-serif, normal tall capital proportions, a controlled medium/semibold weight, generous open counters and natural letter spacing. Inspired by the clarity of airport and Japanese railway signage. No flattened or stretched letters, no excessively thick strokes. Letters must be readable at 64 pixels. Balance their stroke weight with the geometric mark. The logo itself should fit comfortably in an approximately square silhouette; do not let DBR turn the whole composition into a wide banner.
 
-Integrate the exact studio name "DBR" into a clearly visible, front-facing rectangular NAMEPLATE on the rig's UPPER FRONT CROSSBEAM. Do not put DBR underneath the whole illustration. The nameplate must be a functional part of the structure. White nameplate area with cyan letters. Typeface direction: upright rounded humanist sans-serif inspired by airport and Japanese railway wayfinding, medium weight, controlled strokes, normal tall capital proportions, open counters, modest corner rounding and balanced tracking. D, B and R must not be squashed, stretched, cartoonish, heavy or compressed. Keep the nameplate nearly frontal so text remains upright and naturally proportioned. Text only "DBR", no other lettering.
-
-Color: white background. Exact primary cyan DeepSkyBlue #00BFFF for the main faces and letters, light cyan tints for upper planes, a darker shade of the same cyan for right-facing planes and depth. Cohesive white and cyan palette only. No unrelated accent colors, no black, no deep navy. Crisp edges.
-Scale: the entire unified rig fills around 88-92 percent of the square canvas, with balanced narrow margins. At 64-128px the frame, cube, game-control symbols and DBR should remain identifiable. Avoid small technical details, fine lines, floating nodes, orbit paths, diagrams, tiny screws, measurement marks or disconnected decorative shapes.
-Deliver one polished, balanced finished square app icon on opaque white. No presentation mockup or multiple alternatives.
+Color palette: ONE solid cyan #00BFFF on opaque pure white #FFFFFF. Indicate the cube's dimensionality only through minimal geometry and clean white negative-space seams, not gradients or many shades. No black. Flat, crisp, vector-friendly shapes with controlled subtle corner rounding. The minimal studio mark in the reference is the level of simplicity required.
+Composition: tightly unified central icon occupying about 82 percent of the canvas, even optical margins, strong dominant silhouette. Do not draw a rounded-square app tile or add shadows. No subtitles, no mockup, no multiple alternatives. Return only one finished square emblem.
